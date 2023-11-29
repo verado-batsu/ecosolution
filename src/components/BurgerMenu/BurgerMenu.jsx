@@ -1,4 +1,8 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { Link } from 'react-scroll';
+import { useMediaQuery } from 'react-responsive';
+
+import { findHeaderHeight } from 'helpers/findHeaderHeight';
 
 import { ReactComponent as MenuIcon } from 'assets/images/header/menu.svg';
 import { ReactComponent as CloseIcon } from 'assets/images/header/close.svg';
@@ -14,6 +18,7 @@ const {
     menuBody,
     menuBodyActive,
     menuBox,
+    menuBoxActive,
     closeBtn,
     closeBtnText,
     closeIcon,
@@ -25,14 +30,33 @@ const {
     socialItem,
     socialLink,
     socialIcon,
-    facebookIcon,
 } = styles;
+
+const arrOfSection = [
+    'Main',
+    'About',
+    'Service',
+    'Cases',
+    'FAQ',
+    'Customers',
+    'Contact Us',
+];
 
 export function BurgerMenu() {
     const [isMenuShown, setIsMenuShown] = useState(false);
+    const [headerHeight, setHeaderHeight] = useState(() => findHeaderHeight());
+
+    const isMobile = useMediaQuery({ maxWidth: 767 });
+    const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1439 });
+    const isDesktop = useMediaQuery({ minWidth: 1440 });
+
+    useEffect(() => {
+        setHeaderHeight(findHeaderHeight());
+    }, [headerHeight, isMobile, isTablet, isDesktop]);
 
     function handleMenuClick(e) {
         setIsMenuShown(prev => !prev);
+        document.body.classList.toggle('_lock');
     }
 
     return (
@@ -42,72 +66,52 @@ export function BurgerMenu() {
             </button>
             <nav
                 className={
-                    isMenuShown ? `${menuBody} ${menuBodyActive}` : menuBody
+                    isMenuShown
+                        ? `${menuBody} ${menuBodyActive} container`
+                        : `${menuBody} container`
                 }
             >
-                <div className="container">
-                    <div className={menuBox}>
-                        <button onClick={handleMenuClick} className={closeBtn}>
-                            <CloseIcon className={closeIcon} />
-                            <span className={closeBtnText}>close</span>
-                        </button>
-                        <ul className={menuList}>
-                            <li className={menuItem}>
-                                <a className={menuLink} href="./">
-                                    <span>Main</span>
-                                    <ArrowIcon className={arrowIcon} />
-                                </a>
-                            </li>
-                            <li className={menuItem}>
-                                <a className={menuLink} href="./">
-                                    <span>About</span>
-                                    <ArrowIcon className={arrowIcon} />
-                                </a>
-                            </li>
-                            <li className={menuItem}>
-                                <a className={menuLink} href="./">
-                                    <span>Service</span>
-                                    <ArrowIcon className={arrowIcon} />
-                                </a>
-                            </li>
-                            <li className={menuItem}>
-                                <a className={menuLink} href="./">
-                                    <span>Cases</span>
-                                    <ArrowIcon className={arrowIcon} />
-                                </a>
-                            </li>
-                            <li className={menuItem}>
-                                <a className={menuLink} href="./">
-                                    <span>FAQ</span>
-                                    <ArrowIcon className={arrowIcon} />
-                                </a>
-                            </li>
-                            <li className={menuItem}>
-                                <a className={menuLink} href="./">
-                                    <span>Customers</span>
-                                    <ArrowIcon className={arrowIcon} />
-                                </a>
-                            </li>
-                            <li className={menuItem}>
-                                <a className={menuLink} href="./">
-                                    <span>Contact Us</span>
-                                    <ArrowIcon className={arrowIcon} />
-                                </a>
-                            </li>
-                        </ul>
-                        <ul className={socialList}>
-                            <li className={socialItem}>
-                                <a className={socialLink} href="./">
-                                    <FacebookIcon className={socialIcon} />
-                                </a>
-                            </li>
-                            <li className={socialItem}>
-                                <a className={socialLink} href="./">
-                                    <InstagramIcon className={socialIcon} />
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                <div
+                    className={menuBox}
+                    // className={
+                    //     isMenuShown ? `${menuBox} ${menuBoxActive}` : menuBox
+                    // }
+                >
+                    <button onClick={handleMenuClick} className={closeBtn}>
+                        <CloseIcon className={closeIcon} />
+                        <span className={closeBtnText}>close</span>
+                    </button>
+                    <ul className={menuList}>
+                        {arrOfSection.map(title => {
+                            return (
+                                <li key={title} className={menuItem}>
+                                    <Link
+                                        onClick={handleMenuClick}
+                                        to={title}
+                                        className={menuLink}
+                                        smooth={true}
+                                        offset={Number(`-${headerHeight}`)}
+                                        duration={500}
+                                    >
+                                        <span>{title}</span>
+                                        <ArrowIcon className={arrowIcon} />
+                                    </Link>
+                                </li>
+                            );
+                        })}
+                    </ul>
+                    <ul className={socialList}>
+                        <li className={socialItem}>
+                            <a className={socialLink} href="./">
+                                <FacebookIcon className={socialIcon} />
+                            </a>
+                        </li>
+                        <li className={socialItem}>
+                            <a className={socialLink} href="./">
+                                <InstagramIcon className={socialIcon} />
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </nav>
         </div>
