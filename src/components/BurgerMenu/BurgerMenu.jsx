@@ -17,6 +17,7 @@ const {
     menuIcon,
     menuBody,
     menuBodyActive,
+    menuContainer,
     menuBox,
     menuBoxActive,
     closeBtn,
@@ -67,51 +68,54 @@ export function BurgerMenu() {
             <nav
                 className={
                     isMenuShown
-                        ? `${menuBody} ${menuBodyActive} container`
-                        : `${menuBody} container`
+                        ? `${menuBody} ${menuBodyActive}`
+                        : `${menuBody}`
                 }
             >
-                <div
-                    className={menuBox}
-                    // className={
-                    //     isMenuShown ? `${menuBox} ${menuBoxActive}` : menuBox
-                    // }
-                >
-                    <button onClick={handleMenuClick} className={closeBtn}>
-                        <CloseIcon className={closeIcon} />
-                        <span className={closeBtnText}>close</span>
-                    </button>
-                    <ul className={menuList}>
-                        {arrOfSection.map(title => {
-                            return (
-                                <li key={title} className={menuItem}>
-                                    <Link
-                                        onClick={handleMenuClick}
-                                        to={title}
-                                        className={menuLink}
-                                        smooth={true}
-                                        offset={Number(`-${headerHeight}`)}
-                                        duration={500}
-                                    >
-                                        <span>{title}</span>
-                                        <ArrowIcon className={arrowIcon} />
-                                    </Link>
-                                </li>
-                            );
-                        })}
-                    </ul>
-                    <ul className={socialList}>
-                        <li className={socialItem}>
-                            <a className={socialLink} href="./">
-                                <FacebookIcon className={socialIcon} />
-                            </a>
-                        </li>
-                        <li className={socialItem}>
-                            <a className={socialLink} href="./">
-                                <InstagramIcon className={socialIcon} />
-                            </a>
-                        </li>
-                    </ul>
+                <div className={`${menuContainer} container`}>
+                    <div
+                        className={
+                            isMenuShown
+                                ? `${menuBox} ${menuBoxActive}`
+                                : menuBox
+                        }
+                    >
+                        <button onClick={handleMenuClick} className={closeBtn}>
+                            <CloseIcon className={closeIcon} />
+                            <span className={closeBtnText}>close</span>
+                        </button>
+                        <ul className={menuList}>
+                            {arrOfSection.map(title => {
+                                return (
+                                    <li key={title} className={menuItem}>
+                                        <Link
+                                            onClick={handleMenuClick}
+                                            to={title}
+                                            className={menuLink}
+                                            smooth={true}
+                                            offset={Number(`-${headerHeight}`)}
+                                            duration={500}
+                                        >
+                                            <span>{title}</span>
+                                            <ArrowIcon className={arrowIcon} />
+                                        </Link>
+                                    </li>
+                                );
+                            })}
+                        </ul>
+                        <ul className={socialList}>
+                            <li className={socialItem}>
+                                <a className={socialLink} href="./">
+                                    <FacebookIcon className={socialIcon} />
+                                </a>
+                            </li>
+                            <li className={socialItem}>
+                                <a className={socialLink} href="./">
+                                    <InstagramIcon className={socialIcon} />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </nav>
         </div>
