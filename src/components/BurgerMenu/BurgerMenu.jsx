@@ -4,11 +4,11 @@ import { useMediaQuery } from 'react-responsive';
 
 import { findHeaderHeight } from 'helpers/findHeaderHeight';
 
-import { ReactComponent as MenuIcon } from 'assets/images/header/menu.svg';
-import { ReactComponent as CloseIcon } from 'assets/images/header/close.svg';
-import { ReactComponent as ArrowIcon } from 'assets/images/header/arrow-right.svg';
-import { ReactComponent as InstagramIcon } from 'assets/images/header/instagram.svg';
-import { ReactComponent as FacebookIcon } from 'assets/images/header/facebook.svg';
+import { ReactComponent as MenuIcon } from 'assets/images/header/icons/menu.svg';
+import { ReactComponent as CloseIcon } from 'assets/images/header/icons/close.svg';
+import { ReactComponent as ArrowIcon } from 'assets/images/header/icons/arrow-right.svg';
+import { ReactComponent as InstagramIcon } from 'assets/images/header/icons/instagram.svg';
+import { ReactComponent as FacebookIcon } from 'assets/images/header/icons/facebook.svg';
 
 import styles from './BurgerMenu.module.scss';
 const {

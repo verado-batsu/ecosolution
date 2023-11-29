@@ -6,10 +6,39 @@
 
 	@media screen and (min-width: $tablet) {
 		padding-top: 50px;
+		padding-bottom: 50px;
 	}
 
 	@media screen and (min-width: $desktop) {
 		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+}
+
+.valuesTitleWrapper {
+	margin-bottom: 36px;
+
+	@media screen and (min-width: $tablet) {
+		margin-bottom: 100px;
+		display: grid;
+		grid-template-columns: 1fr 1px 1fr;
+		grid-template-rows: 1fr;
+		gap: 11px;
+
+		&::after {
+			content: "";
+			display: inline-block;
+			width: 1px;
+			height: 100%;
+			background-color: #97d28b;
+
+			order: 2;
+		}
+	}
+
+	@media screen and (min-width: $desktop) {
+		margin-bottom: 124px;
+		gap: 161px;
 	}
 }
 
@@ -21,26 +50,140 @@
 	font-size: 28px;
 	line-height: 1;
 	text-transform: uppercase;
+
+	order: 1;
+
+	@media screen and (min-width: $tablet) {
+		margin-bottom: 0;
+
+		font-size: 36px;
+	}
+
+	@media screen and (min-width: $tablet) {
+		font-size: 48px;
+	}
 }
 
 .valuesPreTitle {
-	margin-bottom: 36px;
-
 	color: #173d33;
 	font-family: Fira Sans;
 	font-size: 16px;
 	letter-spacing: -0.64px;
 	text-align: justify;
+
+	order: 3;
 }
 
 .valuesList {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	gap: 24px;
+
+	@media screen and (min-width: $tablet) {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+	}
+
+	@media screen and (min-width: $tablet) {
+		gap: 48px;
+	}
 }
 
 .valuesItem {
+	display: flex;
+	flex-direction: column;
+	padding: 13px 12px 12px 12px;
+
+	background-color: #eaedf1;
+
+	@media screen and (min-width: $tablet) {
+		padding: 12px;
+	}
+
+	@media screen and (min-width: $desktop) {
+		padding: 48px 24px;
+	}
+
+	&::after {
+		content: "";
+		display: block;
+		height: 1px;
+		margin-bottom: 12px;
+
+		background-color: #97d28b;
+
+		order: 2;
+
+		@media screen and (min-width: $desktop) {
+			margin-bottom: 24px;
+		}
+	}
 }
 
 .itemTitle {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin-bottom: 33px;
+
+	color: #173d33;
+	font-family: Oswald;
+	font-size: 16px;
+	line-height: calc(24px / 16px);
+	text-transform: uppercase;
+
+	order: 1;
+
+	@media screen and (min-width: $tablet) {
+		margin-bottom: 51px;
+
+		font-size: 18px;
+		line-height: calc(24px / 18px);
+	}
+
+	@media screen and (min-width: $desktop) {
+		margin-bottom: 94px;
+
+		font-size: 32px;
+		line-height: calc(48px / 32px);
+	}
+}
+
+.valuesItemIcon {
+	@media screen and (min-width: $desktop) {
+		width: 24px;
+		height: 24px;
+	}
 }
 
 .itemPreTitle {
+	color: #173d33;
+	text-align: justify;
+	font-family: Fira Sans;
+	font-size: 14px;
+	letter-spacing: -0.56px;
+
+	order: 3;
+
+	@media screen and (min-width: $desktop) {
+		font-size: 16px;
+		letter-spacing: -0.64px;
+	}
+}
+
+.valuesItemImg1 {
+	grid-row-start: 1;
+	grid-column-start: 3;
+	grid-column-end: 5;
+}
+
+.valuesItemImg2 {
+	grid-row-start: 2;
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+
+.valuesImg {
+	width: 100%;
 }

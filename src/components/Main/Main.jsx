@@ -3,7 +3,7 @@ import { useMediaQuery } from 'react-responsive';
 import { Link } from 'react-scroll';
 
 import { findHeaderHeight } from 'helpers/findHeaderHeight';
-import { ReactComponent as ArrowIcon } from 'assets/images/main/arrow-right.svg';
+import { ReactComponent as ArrowIcon } from 'assets/images/main/icons/arrow-right.svg';
 import windTurbine from 'assets/images/main/windTurbine.jpg';
 import windTurbine2x from 'assets/images/main/windTurbine@2x.jpg';
 import windTurbineDesktop from 'assets/images/main/windTurbineDesktop.jpg';
