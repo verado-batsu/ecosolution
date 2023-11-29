@@ -8,11 +8,19 @@ import { BurgerMenu } from 'components/BurgerMenu/BurgerMenu';
 import headerLogo from 'assets/images/header/logo.png';
 
 import styles from './Header.module.scss';
-const { header, headerBody, headerLogoLink, logo, menuWrapper, getInTouch } =
-    styles;
+const {
+    header,
+    scrolled,
+    headerBody,
+    headerLogoLink,
+    logo,
+    menuWrapper,
+    getInTouch,
+} = styles;
 
 export function Header() {
     const [headerHeight, setHeaderHeight] = useState(() => findHeaderHeight());
+    const [headerBackground, setHeaderBackground] = useState(false);
 
     const isMobile = useMediaQuery({ maxWidth: 767 });
     const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1439 });
@@ -22,8 +30,23 @@ export function Header() {
         setHeaderHeight(findHeaderHeight());
     }, [headerHeight, isMobile, isTablet, isDesktop]);
 
+    useEffect(() => {
+        function changeBackground() {
+            if (window.scrollY >= headerHeight) {
+                setHeaderBackground(true);
+            } else {
+                setHeaderBackground(false);
+            }
+        }
+
+        window.addEventListener('scroll', changeBackground);
+        return () => {
+            window.removeEventListener('scroll', changeBackground);
+        };
+    }, [headerHeight]);
+
     return (
-        <header className={header}>
+        <header className={headerBackground ? `${header} ${scrolled}` : header}>
             <div className="container">
                 <div className={headerBody}>
                     <a className={headerLogoLink} href="./">
