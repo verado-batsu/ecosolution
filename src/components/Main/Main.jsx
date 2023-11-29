@@ -1,33 +1,100 @@
+import { useEffect, useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
+import { Link } from 'react-scroll';
+
+import { findHeaderHeight } from 'helpers/findHeaderHeight';
+import { ReactComponent as ArrowIcon } from 'assets/images/main/arrow-right.svg';
+import windTurbine from 'assets/images/main/windTurbine.jpg';
+import windTurbine2x from 'assets/images/main/windTurbine@2x.jpg';
+import windTurbineDesktop from 'assets/images/main/windTurbineDesktop.jpg';
+import windTurbineDesktop2x from 'assets/images/main/windTurbineDesktop@2x.jpg';
+
 import styles from './Main.module.scss';
-const { main } = styles;
+const {
+    main,
+    mainContainer,
+    mainTopWrapper,
+    mainTitle,
+    preTitleWrapper,
+    mainPreTitle,
+    mainBtnWrapper,
+    learnMoreBtn,
+    mainArrowWrapper,
+    mainArrowIcon,
+    mainBottomWrapper,
+    addressWrapper,
+    physAddress,
+    mailAddress,
+    mainCopy,
+    windTurbineImg,
+} = styles;
 
 export function Main() {
+    const [headerHeight, setHeaderHeight] = useState(() => findHeaderHeight());
+
+    const isMobile = useMediaQuery({ maxWidth: 767 });
+    const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1439 });
+    const isDesktop = useMediaQuery({ minWidth: 1440 });
+
+    useEffect(() => {
+        setHeaderHeight(findHeaderHeight());
+    }, [headerHeight, isMobile, isTablet, isDesktop]);
+
     return (
         <section name="Main" className={main}>
-            <div className="container">
-                <h1>MAIN</h1>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Quasi, molestiae quam ipsa illum, minima error voluptatum
-                    reprehenderit nisi labore eum et dolore voluptate, odio quod
-                    velit possimus sequi nobis vel! Suscipit cumque, sapiente
-                    iusto id mollitia perferendis dolore minima voluptate quia
-                    voluptatum officiis praesentium totam, voluptas, libero rem?
-                    Possimus amet quibusdam, doloribus quis esse labore
-                    distinctio ea non nihil rem. Quidem, omnis voluptas? Vitae,
-                    dolorem quasi numquam, quidem magni praesentium cupiditate
-                    perferendis deserunt laudantium adipisci quo ipsam velit
-                    doloremque omnis fuga? Delectus, repudiandae temporibus
-                    vitae at dolorum molestiae cum quasi. Quam dolorem in iure
-                    iusto corrupti voluptatibus, excepturi explicabo placeat ut
-                    nisi obcaecati libero. Facilis incidunt, quas tenetur
-                    perspiciatis dolorem, natus beatae molestiae facere dolor
-                    labore odio provident voluptate cupiditate! Iusto magnam
-                    itaque numquam in eum perspiciatis, quisquam sit pariatur.
-                    Eos facere nulla a ut ab mollitia rerum laborum tempora,
-                    vitae tenetur omnis atque fugiat laboriosam incidunt
-                    inventore nobis obcaecati?
-                </p>
+            <div className={`container ${mainContainer}`}>
+                <div className={mainTopWrapper}>
+                    <h1 className={mainTitle}>RENEWABLE ENERGY For any task</h1>
+                    <div className={preTitleWrapper}>
+                        <p className={mainPreTitle}>
+                            Development and implementation of renewable
+                            non-polluting energy sources, generating power
+                            generation using energy wind, sun, water, biomass
+                        </p>
+                        <div className={mainBtnWrapper}>
+                            <Link
+                                to="Cases"
+                                className={learnMoreBtn}
+                                smooth={true}
+                                offset={Number(`-${headerHeight}`)}
+                                duration={500}
+                            >
+                                <span>Learn more</span>
+                                <div className={mainArrowWrapper}>
+                                    <ArrowIcon className={mainArrowIcon} />
+                                </div>
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+                <div className={mainBottomWrapper}>
+                    <p className={addressWrapper}>
+                        <span className={physAddress}>
+                            79005, Ukraine, Lvivstreet. Shota Rustaveli, 7
+                        </span>
+                        <span className={mailAddress}>
+                            office@ecosolution.com
+                        </span>
+                        <span className={mainCopy}>
+                            ecosolution &copy; 2023
+                        </span>
+                    </p>
+                    {isDesktop ? (
+                        <img
+                            className={windTurbineImg}
+                            srcSet={`${windTurbineDesktop} 1x, ${windTurbineDesktop2x} 2x`}
+                            src={windTurbineDesktop}
+                            alt="wind turbine clean energy"
+                        />
+                    ) : (
+                        <img
+                            className={windTurbineImg}
+                            srcSet={`${windTurbine} 1x, ${windTurbine2x} 2x`}
+                            src={windTurbine}
+                            alt="wind turbine clean energy"
+                        />
+                    )}
+                </div>
             </div>
         </section>
     );

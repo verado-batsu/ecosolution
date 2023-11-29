@@ -1,0 +1,229 @@
+@import "constants/sizes";
+
+.main {
+	padding-top: 110px;
+	padding-bottom: 18px;
+
+	@media screen and (min-width: $tablet) {
+		padding-top: 128px;
+		padding-bottom: 50px;
+	}
+
+	@media screen and (min-width: $desktop) {
+		padding-top: 176px;
+		padding-bottom: 60px;
+	}
+}
+
+.mainContainer {
+	display: flex;
+	flex-direction: column;
+
+	&::after {
+		content: "";
+		display: block;
+		margin-bottom: 24px;
+		height: 1px;
+		background-color: #97d28b;
+		order: 1;
+
+		@media screen and (min-width: $tablet) {
+			margin-bottom: 16px;
+		}
+
+		@media screen and (min-width: $desktop) {
+			margin-bottom: 12px;
+		}
+	}
+}
+
+.mainTopWrapper {
+	order: 0;
+
+	@media screen and (min-width: $tablet) {
+		display: flex;
+		gap: 65px;
+		margin-bottom: 24px;
+	}
+
+	@media screen and (min-width: $desktop) {
+		gap: 296px;
+	}
+}
+
+.mainTitle {
+	margin-bottom: 24px;
+
+	color: #173d33;
+	font-family: Oswald;
+	font-size: 36px;
+	line-height: 1;
+	text-transform: uppercase;
+
+	@media screen and (min-width: $tablet) {
+		margin-bottom: 0;
+
+		font-size: 48px;
+	}
+
+	@media screen and (min-width: $desktop) {
+		width: 485px;
+
+		font-size: 64px;
+	}
+}
+
+.preTitleWrapper {
+	@media screen and (min-width: $tablet) {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+}
+
+.mainPreTitle {
+	margin-bottom: 24px;
+
+	color: #173d33;
+	font-family: Fira Sans;
+	letter-spacing: -0.64px;
+	text-align: justify;
+
+	@media screen and (min-width: $tablet) {
+		margin-bottom: 0;
+		width: 342px;
+	}
+
+	@media screen and (min-width: $desktop) {
+		width: 363px;
+	}
+}
+
+.mainBtnWrapper {
+	display: flex;
+	justify-content: center;
+
+	@media screen and (min-width: $tablet) {
+		justify-content: start;
+	}
+}
+
+.learnMoreBtn {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	height: 40px;
+	margin-bottom: 24px;
+
+	padding: 4px 4px 4px 16px;
+
+	border-radius: 500px;
+	border: 1px solid #97d28b;
+
+	font-size: 16px;
+	color: #173d33;
+	font-family: Fira Sans;
+	line-height: calc(18px / 16px);
+	letter-spacing: -0.64px;
+
+	cursor: pointer;
+
+	&:hover,
+	&:focus {
+		color: #fff;
+		background-color: #97d28b;
+	}
+
+	@media screen and (min-width: $tablet) {
+		margin-bottom: 0;
+	}
+}
+
+.mainArrowWrapper {
+	display: flex;
+	align-items: center;
+	padding: 8px;
+
+	border-radius: 100px;
+	background-color: #97d28b;
+}
+
+.mainArrowIcon {
+	stroke: currentColor;
+}
+
+.mainBottomWrapper {
+	order: 2;
+}
+
+.addressWrapper {
+	margin-bottom: 36px;
+
+	color: #173d33;
+	font-family: Fira Sans;
+	font-size: 16px;
+	letter-spacing: -0.64px;
+
+	@media screen and (min-width: $tablet) {
+		display: flex;
+		margin-bottom: 40px;
+	}
+
+	@media screen and (min-width: $desktop) {
+		margin-bottom: 36px;
+	}
+}
+
+.physAddress {
+	display: block;
+	margin-bottom: 8px;
+	text-align: center;
+
+	@media screen and (min-width: $tablet) {
+		margin-bottom: 0;
+		margin-right: 77px;
+	}
+
+	@media screen and (min-width: $desktop) {
+		margin-right: 492px;
+	}
+}
+
+.mailAddress {
+	display: block;
+	text-align: center;
+
+	@media screen and (min-width: $tablet) {
+		text-align: start;
+		margin-right: 50px;
+	}
+
+	@media screen and (min-width: $desktop) {
+		margin-right: 167px;
+	}
+}
+
+.mainCopy {
+	display: none;
+
+	@media screen and (min-width: $tablet) {
+		display: inline-block;
+	}
+}
+
+.windTurbineImg {
+	display: block;
+	max-width: 319px;
+	height: 200px;
+	margin: 0 auto;
+
+	@media screen and (min-width: $tablet) {
+		max-width: 100%;
+		height: 348px;
+		margin: 0;
+	}
+
+	@media screen and (min-width: $desktop) {
+		height: 524px;
+	}
+}

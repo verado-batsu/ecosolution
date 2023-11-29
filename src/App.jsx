@@ -33,13 +33,13 @@ function App() {
             <Header />
             <main style={{ paddingTop: headerHeight }}>
                 <Main />
-                <About />
+                {/* <About /> */}
                 <Values />
                 <Electricity />
-                <Services />
+                {/* <Services /> */}
                 <Cases />
                 <FAQ />
-                <Customers />
+                {/* <Customers /> */}
                 <ContactUs />
             </main>
             <Footer />
