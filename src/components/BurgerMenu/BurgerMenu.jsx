@@ -33,7 +33,7 @@ const {
     socialIcon,
 } = styles;
 
-const arrOfSection = ['Main', 'Cases', 'FAQ', 'Contact Us'];
+const arrOfSection = ['Main', 'Values', 'Cases', 'FAQ', 'Contact Us'];
 
 export function BurgerMenu() {
     const [isMenuShown, setIsMenuShown] = useState(false);
