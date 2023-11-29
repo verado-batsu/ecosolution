@@ -8,6 +8,11 @@
 	z-index: 10;
 
 	background-color: #fff;
+	transition: background-color 0.3s ease;
+
+	&.scrolled {
+		background-color: #dcefd8;
+	}
 }
 
 .headerBody {
