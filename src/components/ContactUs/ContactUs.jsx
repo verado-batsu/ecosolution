@@ -1,8 +1,8 @@
-export function About() {
+export function ContactUs() {
     return (
-        <section name="About">
+        <section name="Contact Us">
             <div className="container">
-                <h1>ABOUT</h1>
+                <h1>CONTACT US</h1>
                 <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                     Quasi, molestiae quam ipsa illum, minima error voluptatum

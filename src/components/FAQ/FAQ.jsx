@@ -1,8 +1,8 @@
-export function About() {
+export function FAQ() {
     return (
-        <section name="About">
+        <section name="FAQ">
             <div className="container">
-                <h1>ABOUT</h1>
+                <h1>FAQ</h1>
                 <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                     Quasi, molestiae quam ipsa illum, minima error voluptatum

@@ -1,8 +1,8 @@
-export function About() {
+export function Services() {
     return (
-        <section name="About">
+        <section name="Service">
             <div className="container">
-                <h1>ABOUT</h1>
+                <h1>SERVICES</h1>
                 <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                     Quasi, molestiae quam ipsa illum, minima error voluptatum
