@@ -33,15 +33,7 @@ const {
     socialIcon,
 } = styles;
 
-const arrOfSection = [
-    'Main',
-    'About',
-    'Service',
-    'Cases',
-    'FAQ',
-    'Customers',
-    'Contact Us',
-];
+const arrOfSection = ['Main', 'Cases', 'FAQ', 'Contact Us'];
 
 export function BurgerMenu() {
     const [isMenuShown, setIsMenuShown] = useState(false);
@@ -62,7 +54,7 @@ export function BurgerMenu() {
 
     return (
         <div className={headerMenu}>
-            <button onClick={handleMenuClick} className={menuBtn}>
+            <button type="button" onClick={handleMenuClick} className={menuBtn}>
                 <MenuIcon className={menuIcon} />
             </button>
             <nav
@@ -80,7 +72,11 @@ export function BurgerMenu() {
                                 : menuBox
                         }
                     >
-                        <button onClick={handleMenuClick} className={closeBtn}>
+                        <button
+                            type="button"
+                            onClick={handleMenuClick}
+                            className={closeBtn}
+                        >
                             <CloseIcon className={closeIcon} />
                             <span className={closeBtnText}>close</span>
                         </button>
