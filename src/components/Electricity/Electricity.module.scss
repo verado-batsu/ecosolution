@@ -1,0 +1,106 @@
+@import "constants/sizes";
+
+.electricity {
+	padding: 18px 0;
+
+	@media screen and (min-width: $tablet) {
+		padding: 50px 0;
+	}
+
+	@media screen and (min-width: $desktop) {
+		padding: 60px 0;
+	}
+}
+
+.electricityWrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 24px;
+
+	@media screen and (min-width: $desktop) {
+		gap: 16px;
+	}
+
+	&::after {
+		content: "";
+		display: inline-block;
+		width: 1px;
+		height: 48px;
+
+		background-color: #97d28b;
+
+		order: 2;
+
+		@media screen and (min-width: $tablet) {
+			height: 87px;
+		}
+	}
+}
+
+.electricityTitle {
+	color: #173d33;
+	text-align: center;
+	font-family: Oswald;
+	font-size: 28px;
+	line-height: 1;
+	text-transform: uppercase;
+
+	order: 1;
+
+	@media screen and (min-width: $tablet) {
+		width: 368px;
+		font-size: 36px;
+	}
+
+	@media screen and (min-width: $desktop) {
+		width: 491px;
+		font-size: 48px;
+	}
+}
+
+.electricityCount {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+
+	order: 3;
+
+	@media screen and (min-width: $tablet) {
+		gap: 24px;
+	}
+}
+
+.electricityQuantity {
+	color: #97d28b;
+	font-family: Oswald;
+	font-size: 48px;
+	font-weight: 700;
+	line-height: 1;
+	text-transform: uppercase;
+
+	@media screen and (min-width: $tablet) {
+		font-size: 100px;
+	}
+
+	@media screen and (min-width: $desktop) {
+		font-size: 164px;
+	}
+}
+
+.electricityUnits {
+	color: #173d33;
+	font-family: Oswald;
+	font-size: 24px;
+	line-height: 1;
+
+	@media screen and (min-width: $tablet) {
+		font-size: 28px;
+		line-height: calc(48px / 28px);
+	}
+
+	@media screen and (min-width: $desktop) {
+		font-size: 48px;
+		line-height: 1;
+	}
+}
