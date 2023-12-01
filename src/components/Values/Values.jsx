@@ -98,7 +98,7 @@ export function Values() {
                                     className={valuesImg}
                                     srcSet={`${firstImgTablet} 1x, ${firstImgTablet2x} 2x`}
                                     src={firstImgTablet}
-                                    alt="wind turbine clean energy"
+                                    alt="wind-farms-fields"
                                 />
                             </li>
                             <li className={valuesItemImg2}>
@@ -106,7 +106,7 @@ export function Values() {
                                     className={valuesImg}
                                     srcSet={`${secondImgTablet} 1x, ${secondImgTablet2x} 2x`}
                                     src={secondImgTablet}
-                                    alt="wind turbine clean energy"
+                                    alt="man worker firld by solar panels"
                                 />
                             </li>
                         </>
@@ -118,7 +118,7 @@ export function Values() {
                                     className={valuesImg}
                                     srcSet={`${firstImgDesktop} 1x, ${firstImgDesktop2x} 2x`}
                                     src={firstImgDesktop}
-                                    alt="wind turbine clean energy"
+                                    alt="wind farms fields"
                                 />
                             </li>
                             <li className={valuesItemImg2}>
@@ -126,7 +126,7 @@ export function Values() {
                                     className={valuesImg}
                                     srcSet={`${secondImgDesktop} 1x, ${secondImgDesktop2x} 2x`}
                                     src={secondImgDesktop}
-                                    alt="wind turbine clean energy"
+                                    alt="man worker firld by solar panels"
                                 />
                             </li>
                         </>

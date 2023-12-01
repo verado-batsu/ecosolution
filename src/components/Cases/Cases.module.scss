@@ -1,0 +1,117 @@
+@import "constants/sizes";
+
+.cases {
+	padding: 18px 0;
+
+	@media screen and (min-width: $tablet) {
+		padding: 50px 0;
+	}
+
+	@media screen and (min-width: $desktop) {
+		padding: 60px 0;
+	}
+}
+
+.casesWrapper {
+	margin-bottom: 26px;
+
+	@media screen and (min-width: $tablet) {
+		margin-bottom: 38px;
+		display: grid;
+		grid-template-columns: 1fr 1px 1fr;
+		grid-template-rows: 1fr;
+		gap: 9px;
+
+		&::after {
+			content: "";
+			width: 1px;
+			height: 100%;
+			background-color: #97d28b;
+
+			order: 2;
+		}
+	}
+
+	@media screen and (min-width: $desktop) {
+		margin-bottom: 120px;
+		gap: 161px;
+	}
+}
+
+.casesTitle {
+	margin-bottom: 24px;
+
+	color: #173d33;
+	font-family: Oswald;
+	font-size: 28px;
+	line-height: 1;
+	text-transform: uppercase;
+
+	@media screen and (min-width: $tablet) {
+		font-size: 36px;
+
+		order: 1;
+	}
+
+	@media screen and (min-width: $desktop) {
+		font-size: 48px;
+	}
+}
+
+.casesNavigateWrapper {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+
+	@media screen and (min-width: $tablet) {
+		order: 3;
+	}
+}
+
+.counterOfSlides {
+	color: #173d33;
+	text-align: justify;
+	font-family: Fira Sans;
+	font-size: 28px;
+	font-weight: 300;
+	letter-spacing: -1.12px;
+}
+.counterOfSlides > span {
+	color: rgba(23, 61, 51, 0.25);
+}
+
+.arrowsOfSlider {
+	display: flex;
+	gap: 12px;
+
+	@media screen and (min-width: $desktop) {
+		gap: 24px;
+	}
+}
+
+.navigateSliderBtn {
+	width: 66px;
+	height: 66px;
+	padding: 15px;
+
+	border-radius: 100px;
+	border: 1px solid #173d33;
+
+	&:hover,
+	&:focus {
+		border: 1px solid #dcefd8;
+		background-color: #dcefd8;
+	}
+
+	@media screen and (min-width: $desktop) {
+		width: 84px;
+		height: 84px;
+		padding: 24px;
+	}
+}
+
+.leftArrowIcon {
+}
+
+.rightArrowIcon {
+}
