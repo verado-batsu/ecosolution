@@ -1,30 +1,37 @@
+import { useState } from 'react';
+
+import { FAQItem } from './FAQItem';
+import { faqData } from 'data/faqData';
+
+import './FAQ.scss';
+
 export function FAQ() {
+    const [openId, setOpenId] = useState(faqData[0].id);
+
+    function handleClick(id) {
+        if (id === openId) {
+            setOpenId(null);
+        } else {
+            setOpenId(id);
+        }
+    }
+
     return (
-        <section name="FAQ">
+        <section name="FAQ" className="faq">
             <div className="container">
-                <h1>FAQ</h1>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Quasi, molestiae quam ipsa illum, minima error voluptatum
-                    reprehenderit nisi labore eum et dolore voluptate, odio quod
-                    velit possimus sequi nobis vel! Suscipit cumque, sapiente
-                    iusto id mollitia perferendis dolore minima voluptate quia
-                    voluptatum officiis praesentium totam, voluptas, libero rem?
-                    Possimus amet quibusdam, doloribus quis esse labore
-                    distinctio ea non nihil rem. Quidem, omnis voluptas? Vitae,
-                    dolorem quasi numquam, quidem magni praesentium cupiditate
-                    perferendis deserunt laudantium adipisci quo ipsam velit
-                    doloremque omnis fuga? Delectus, repudiandae temporibus
-                    vitae at dolorum molestiae cum quasi. Quam dolorem in iure
-                    iusto corrupti voluptatibus, excepturi explicabo placeat ut
-                    nisi obcaecati libero. Facilis incidunt, quas tenetur
-                    perspiciatis dolorem, natus beatae molestiae facere dolor
-                    labore odio provident voluptate cupiditate! Iusto magnam
-                    itaque numquam in eum perspiciatis, quisquam sit pariatur.
-                    Eos facere nulla a ut ab mollitia rerum laborum tempora,
-                    vitae tenetur omnis atque fugiat laboriosam incidunt
-                    inventore nobis obcaecati?
-                </p>
+                <h2 className="faq__title">Frequently Asked Questions</h2>
+                <ul className="faq__list">
+                    {faqData.map(faqItem => {
+                        return (
+                            <FAQItem
+                                key={faqItem.id}
+                                onClick={handleClick}
+                                faqItem={faqItem}
+                                isOpen={faqItem.id === openId}
+                            />
+                        );
+                    })}
+                </ul>
             </div>
         </section>
     );

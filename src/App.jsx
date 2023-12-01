@@ -7,15 +7,12 @@ import './App.scss';
 
 import { Main } from 'components/Main/Main';
 import { Header } from 'components/Header/Header';
-import { About } from 'components/About/About';
 import { Electricity } from 'components/Electricity/Electricity';
 import { Cases } from 'components/Cases/Cases';
 import { Values } from 'components/Values/Values';
 import { FAQ } from 'components/FAQ/FAQ';
 import { ContactUs } from 'components/ContactUs/ContactUs';
 import { Footer } from 'components/Footer/Footer';
-import { Services } from 'components/Services/Services';
-import { Customers } from 'components/Customers/Customers';
 
 function App() {
     const [headerHeight, setHeaderHeight] = useState(() => findHeaderHeight());
@@ -33,13 +30,10 @@ function App() {
             <Header />
             <main style={{ paddingTop: headerHeight }}>
                 <Main />
-                {/* <About /> */}
                 <Values />
                 <Electricity />
-                {/* <Services /> */}
                 <Cases />
                 <FAQ />
-                {/* <Customers /> */}
                 <ContactUs />
             </main>
             <Footer />

@@ -1,10 +1,10 @@
-// import { useEffect, useState } from 'react';
-import { useMediaQuery } from 'react-responsive';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
+
+import { limit } from 'helpers/limit';
 
 import firstCardImgDesktop from 'assets/images/cases/firstSliderImgDesktop.jpg';
 import secondCardImgDesktop from 'assets/images/cases/secondSliderImgDesktop.jpg';
@@ -12,13 +12,8 @@ import secondCardImgDesktop from 'assets/images/cases/secondSliderImgDesktop.jpg
 import { ReactComponent as TopRightArrowIcon } from 'assets/images/cases/icons/arrow-top-right.svg';
 
 import './Slider.scss';
-import { limit } from 'helpers/limit';
 
 export function Slider() {
-    const isMobile = useMediaQuery({ maxWidth: 767 });
-    const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1439 });
-    const isDesktop = useMediaQuery({ minWidth: 1440 });
-
     return (
         <Swiper
             modules={[Navigation, Pagination]}
@@ -49,133 +44,133 @@ export function Slider() {
                 },
             }}
         >
-            <SwiperSlide className="slider-card">
+            <SwiperSlide className="slider__card">
                 <img
-                    className="slider-img"
+                    className="slider__img"
                     src={firstCardImgDesktop}
                     alt="beautiful view wind turbines, grass covered field, captured holland"
                 />
-                <div className="slider-card-info-box">
-                    <div className="slider-title-wrapper">
-                        <h3 className="slider-title">
+                <div className="slider__card-info-box">
+                    <div className="slider__title-wrapper">
+                        <h3 className="slider__title">
                             {limit(
                                 'Lviv Region, Radekhiv town Private Enterprise “ZAKHIDNYI BUH”',
                                 40
                             )}
                         </h3>
-                        <button className="slider-btn" type="button">
-                            <TopRightArrowIcon className="slider-card-icon" />
+                        <button className="slider__btn" type="button">
+                            <TopRightArrowIcon className="slider__card-icon" />
                         </button>
                     </div>
-                    <div className="slider-descr-wrapper">
-                        <p className="slider-info-descr">
+                    <div className="slider__descr-wrapper">
+                        <p className="slider__info-descr">
                             {limit('Wind Power for auto field irrigation', 36)}
                         </p>
-                        <p className="slider-date">July 2023</p>
+                        <p className="slider__date">July 2023</p>
                     </div>
                 </div>
             </SwiperSlide>
-            <SwiperSlide className="slider-card">
+            <SwiperSlide className="slider__card">
                 <img
-                    className="slider-img"
+                    className="slider__img"
                     src={secondCardImgDesktop}
                     alt="beautiful view wind turbines, grass covered field, captured holland"
                 />
-                <div className="slider-card-info-box">
-                    <div className="slider-title-wrapper">
-                        <h3 className="slider-title">
+                <div className="slider__card-info-box">
+                    <div className="slider__title-wrapper">
+                        <h3 className="slider__title">
                             {limit(
                                 'Zhytomyr city Private Enterprise “Bosch”',
                                 40
                             )}
                         </h3>
-                        <button className="slider-btn" type="button">
-                            <TopRightArrowIcon className="slider-card-icon" />
+                        <button className="slider__btn" type="button">
+                            <TopRightArrowIcon className="slider__card-icon" />
                         </button>
                     </div>
-                    <div className="slider-descr-wrapper">
-                        <p className="slider-info-descr">
+                    <div className="slider__descr-wrapper">
+                        <p className="slider__info-descr">
                             {limit('Solar Panels for industrial use', 36)}
                         </p>
-                        <p className="slider-date">November 2023</p>
+                        <p className="slider__date">November 2023</p>
                     </div>
                 </div>
             </SwiperSlide>
-            <SwiperSlide className="slider-card">
+            <SwiperSlide className="slider__card">
                 <img
-                    className="slider-img"
+                    className="slider__img"
                     src={firstCardImgDesktop}
                     alt="beautiful view wind turbines, grass covered field, captured holland"
                 />
-                <div className="slider-card-info-box">
-                    <div className="slider-title-wrapper">
-                        <h3 className="slider-title">
+                <div className="slider__card-info-box">
+                    <div className="slider__title-wrapper">
+                        <h3 className="slider__title">
                             {limit(
                                 'Lviv Region, Radekhiv town Private Enterprise “ZAKHIDNYI BUH”',
                                 40
                             )}
                         </h3>
-                        <button className="slider-btn" type="button">
-                            <TopRightArrowIcon className="slider-card-icon" />
+                        <button className="slider__btn" type="button">
+                            <TopRightArrowIcon className="slider__card-icon" />
                         </button>
                     </div>
-                    <div className="slider-descr-wrapper">
-                        <p className="slider-info-descr">
+                    <div className="slider__descr-wrapper">
+                        <p className="slider__info-descr">
                             {limit('Wind Power for auto field irrigation', 36)}
                         </p>
-                        <p className="slider-date">July 2023</p>
+                        <p className="slider__date">July 2023</p>
                     </div>
                 </div>
             </SwiperSlide>
-            <SwiperSlide className="slider-card">
+            <SwiperSlide className="slider__card">
                 <img
-                    className="slider-img"
+                    className="slider__img"
                     src={secondCardImgDesktop}
                     alt="beautiful view wind turbines, grass covered field, captured holland"
                 />
-                <div className="slider-card-info-box">
-                    <div className="slider-title-wrapper">
-                        <h3 className="slider-title">
+                <div className="slider__card-info-box">
+                    <div className="slider__title-wrapper">
+                        <h3 className="slider__title">
                             {limit(
                                 'Zhytomyr city Private Enterprise “Bosch”',
                                 40
                             )}
                         </h3>
-                        <button className="slider-btn" type="button">
-                            <TopRightArrowIcon className="slider-card-icon" />
+                        <button className="slider__btn" type="button">
+                            <TopRightArrowIcon className="slider__card-icon" />
                         </button>
                     </div>
-                    <div className="slider-descr-wrapper">
-                        <p className="slider-info-descr">
+                    <div className="slider__descr-wrapper">
+                        <p className="slider__info-descr">
                             {limit('Solar Panels for industrial use', 36)}
                         </p>
-                        <p className="slider-date">November 2023</p>
+                        <p className="slider__date">November 2023</p>
                     </div>
                 </div>
             </SwiperSlide>
-            <SwiperSlide className="slider-card">
+            <SwiperSlide className="slider__card">
                 <img
-                    className="slider-img"
+                    className="slider__img"
                     src={firstCardImgDesktop}
                     alt="beautiful view wind turbines, grass covered field, captured holland"
                 />
-                <div className="slider-card-info-box">
-                    <div className="slider-title-wrapper">
-                        <h3 className="slider-title">
+                <div className="slider__card-info-box">
+                    <div className="slider__title-wrapper">
+                        <h3 className="slider__title">
                             {limit(
                                 'Zhytomyr city Private Enterprise “Bosch”',
                                 40
                             )}
                         </h3>
-                        <button className="slider-btn" type="button">
-                            <TopRightArrowIcon className="slider-card-icon" />
+                        <button className="slider__btn" type="button">
+                            <TopRightArrowIcon className="slider__card-icon" />
                         </button>
                     </div>
-                    <div className="slider-descr-wrapper">
-                        <p className="slider-info-descr">
+                    <div className="slider__descr-wrapper">
+                        <p className="slider__info-descr">
                             {limit('Solar Panels for industrial use', 36)}
                         </p>
-                        <p className="slider-date">November 2023</p>
+                        <p className="slider__date">November 2023</p>
                     </div>
                 </div>
             </SwiperSlide>
