@@ -1,0 +1,140 @@
+@import "constants/sizes";
+
+.slider-wrapper {
+}
+
+.slider-card {
+	max-width: 320px;
+	height: 318px;
+
+	@media screen and (min-width: $tablet) {
+		max-width: 342px;
+		height: 322px;
+	}
+
+	@media screen and (min-width: $desktop) {
+		max-width: 596px;
+		height: 506px;
+	}
+}
+
+.slider-img {
+	width: 100%;
+}
+
+.slider-card-info-box {
+	display: flex;
+	flex-direction: column;
+	padding: 24px 12px 12px 12px;
+
+	background-color: #eaedf1;
+
+	@media screen and (min-width: $desktop) {
+		padding: 36px 48px;
+	}
+
+	&::after {
+		content: "";
+		display: block;
+		height: 1px;
+		margin-bottom: 12px;
+
+		background-color: #97d28b;
+
+		order: 2;
+	}
+}
+
+.slider-title-wrapper {
+	display: flex;
+	// justify-content: space-between;
+	gap: 61px;
+	margin-bottom: 22px;
+
+	order: 1;
+
+	@media screen and (min-width: $tablet) {
+		gap: 64px;
+	}
+
+	@media screen and (min-width: $desktop) {
+		gap: 83px;
+	}
+}
+
+.slider-title {
+	color: #173d33;
+	text-align: justify;
+	font-family: Fira Sans;
+	font-size: 18px;
+	letter-spacing: -0.72px;
+
+	@media screen and (min-width: $tablet) {
+		font-size: 20px;
+		letter-spacing: -0.8px;
+	}
+
+	@media screen and (min-width: $desktop) {
+		font-size: 24px;
+		letter-spacing: -0.96px;
+	}
+}
+
+.slider-btn {
+	height: 60px;
+	padding: 16px;
+	border-radius: 100px;
+	background-color: #97d28b;
+
+	&:hover,
+	&:focus {
+		background-color: #83e288;
+		color: #fff;
+	}
+}
+
+.slider-card-icon {
+	stroke: currentColor;
+}
+
+.slider-descr-wrapper {
+	display: flex;
+	justify-content: space-between;
+
+	order: 3;
+}
+
+.slider-info-descr {
+	color: #173d33;
+	text-align: justify;
+	font-family: Fira Sans;
+	font-size: 12px;
+	letter-spacing: -0.48px;
+
+	@media screen and (min-width: $tablet) {
+		font-size: 14px;
+		letter-spacing: -0.56px;
+	}
+
+	@media screen and (min-width: $desktop) {
+		font-size: 16px;
+		letter-spacing: -0.64px;
+	}
+}
+
+.slider-date {
+	color: #173d33;
+	font-family: Fira Sans;
+	font-size: 12px;
+	letter-spacing: -0.48px;
+
+	@media screen and (min-width: $tablet) {
+		font-size: 14px;
+		letter-spacing: -0.56px;
+	}
+
+	@media screen and (min-width: $desktop) {
+		font-size: 16px;
+		letter-spacing: -0.64px;
+	}
+}

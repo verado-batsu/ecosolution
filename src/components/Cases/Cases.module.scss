@@ -14,24 +14,58 @@
 
 .casesWrapper {
 	margin-bottom: 26px;
+
+	@media screen and (min-width: $tablet) {
+		margin-bottom: 38px;
+		display: grid;
+		grid-template-columns: 1fr 1px 1fr;
+		grid-template-rows: 1fr;
+		gap: 9px;
+
+		&::after {
+			content: "";
+			width: 1px;
+			height: 100%;
+			background-color: #97d28b;
+
+			order: 2;
+		}
+	}
+
+	@media screen and (min-width: $desktop) {
+		margin-bottom: 120px;
+		gap: 161px;
+	}
 }
 
 .casesTitle {
 	margin-bottom: 24px;
 
-	text-align: center;
 	color: #173d33;
 	font-family: Oswald;
 	font-size: 28px;
 	line-height: 1;
 	text-transform: uppercase;
+
+	@media screen and (min-width: $tablet) {
+		font-size: 36px;
+
+		order: 1;
+	}
+
+	@media screen and (min-width: $desktop) {
+		font-size: 48px;
+	}
 }
 
 .casesNavigateWrapper {
 	display: flex;
-	gap: 104px;
 	justify-content: center;
 	align-items: flex-end;
+
+	@media screen and (min-width: $tablet) {
+		order: 3;
+	}
 }
 
 .counterOfSlides {
@@ -49,6 +83,10 @@
 .arrowsOfSlider {
 	display: flex;
 	gap: 12px;
+
+	@media screen and (min-width: $desktop) {
+		gap: 24px;
+	}
 }
 
 .navigateSliderBtn {
@@ -58,87 +96,22 @@
 
 	border-radius: 100px;
 	border: 1px solid #173d33;
+
+	&:hover,
+	&:focus {
+		border: 1px solid #dcefd8;
+		background-color: #dcefd8;
+	}
+
+	@media screen and (min-width: $desktop) {
+		width: 84px;
+		height: 84px;
+		padding: 24px;
+	}
 }
 
 .leftArrowIcon {
 }
 
 .rightArrowIcon {
-}
-
-.sliderWrapper {
-}
-
-// ! ------------------------------------------
-.sliderCard {
-}
-
-.sliderImg {
-}
-
-.sliderCardInfoBox {
-	display: flex;
-	flex-direction: column;
-	padding: 24px 12px 12px 12px;
-
-	background-color: #eaedf1;
-
-	&::after {
-		content: "";
-		display: block;
-		height: 1px;
-		margin-bottom: 12px;
-
-		background-color: #97d28b;
-
-		order: 2;
-	}
-}
-
-.sliderTitleWrapper {
-	display: flex;
-	gap: 61px;
-	margin-bottom: 21px;
-
-	order: 1;
-}
-
-.sliderTitle {
-	color: #173d33;
-	text-align: justify;
-	font-family: Fira Sans;
-	font-size: 18px;
-	letter-spacing: -0.72px;
-}
-
-.sliderBtn {
-	height: 60px;
-	padding: 16px;
-	border-radius: 100px;
-	background-color: #97d28b;
-}
-
-.sliderCardIcon {
-}
-
-.sliderDescrWrapper {
-	display: flex;
-	gap: 76px;
-
-	order: 3;
-}
-
-.sliderInfoDescr {
-	color: #173d33;
-	text-align: justify;
-	font-family: Fira Sans;
-	font-size: 12px;
-	letter-spacing: -0.48px;
-}
-
-.sliderDate {
-	color: #173d33;
-	font-family: Fira Sans;
-	font-size: 12px;
-	letter-spacing: -0.48px;
 }
