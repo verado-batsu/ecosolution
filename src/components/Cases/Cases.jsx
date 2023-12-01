@@ -3,7 +3,7 @@ import { Slider } from 'components/Slider/Slider';
 import { ReactComponent as RightArrowIcon } from 'assets/images/cases/icons/arrow-right.svg';
 import { ReactComponent as LeftArrowIcon } from 'assets/images/cases/icons/arrow-left.svg';
 
-import styled from './Cases.module.scss';
+import styles from './Cases.module.scss';
 const {
     cases,
     casesWrapper,
@@ -14,7 +14,7 @@ const {
     navigateSliderBtn,
     leftArrowIcon,
     rightArrowIcon,
-} = styled;
+} = styles;
 
 export function Cases() {
     return (
