@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { Link } from 'react-scroll';
 
-import { findHeaderHeight } from 'helpers/findHeaderHeight';
+import { findHeaderHeight } from 'helpers';
 
 import { BurgerMenu } from 'components/BurgerMenu/BurgerMenu';
 import headerLogo from 'assets/images/header/logo.png';

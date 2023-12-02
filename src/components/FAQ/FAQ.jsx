@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-scroll';
-import { findHeaderHeight } from 'helpers/findHeaderHeight';
 import { useMediaQuery } from 'react-responsive';
 
-import { FAQItem } from './FAQItem';
+import { findHeaderHeight } from 'helpers';
 import { faqData } from 'data/faqData';
+
+import { FAQItem } from './FAQItem';
 
 import './FAQ.scss';
 

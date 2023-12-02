@@ -2,13 +2,15 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-scroll';
 import { useMediaQuery } from 'react-responsive';
 
-import { findHeaderHeight } from 'helpers/findHeaderHeight';
+import { findHeaderHeight } from 'helpers';
 
-import { ReactComponent as MenuIcon } from 'assets/images/header/icons/menu.svg';
-import { ReactComponent as CloseIcon } from 'assets/images/header/icons/close.svg';
-import { ReactComponent as ArrowIcon } from 'assets/images/header/icons/arrow-right.svg';
-import { ReactComponent as InstagramIcon } from 'assets/images/header/icons/instagram.svg';
-import { ReactComponent as FacebookIcon } from 'assets/images/header/icons/facebook.svg';
+import {
+    MenuIcon,
+    CloseIcon,
+    ArrowIcon,
+    InstagramIcon,
+    FacebookIcon,
+} from 'assets/images/header/icons';
 
 import styles from './BurgerMenu.module.scss';
 const {

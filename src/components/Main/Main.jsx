@@ -2,12 +2,15 @@ import { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { Link } from 'react-scroll';
 
-import { findHeaderHeight } from 'helpers/findHeaderHeight';
+import { findHeaderHeight } from 'helpers';
+
 import { ReactComponent as ArrowIcon } from 'assets/images/main/icons/arrow-right.svg';
-import windTurbine from 'assets/images/main/windTurbine.jpg';
-import windTurbine2x from 'assets/images/main/windTurbine@2x.jpg';
-import windTurbineDesktop from 'assets/images/main/windTurbineDesktop.jpg';
-import windTurbineDesktop2x from 'assets/images/main/windTurbineDesktop@2x.jpg';
+import {
+    windTurbine,
+    windTurbine2x,
+    windTurbineDesktop,
+    windTurbineDesktop2x,
+} from 'assets/images/main';
 
 import styles from './Main.module.scss';
 const {
