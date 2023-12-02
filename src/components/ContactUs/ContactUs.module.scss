@@ -1,0 +1,131 @@
+@import "constants/sizes";
+
+.contactUs {
+	padding: 18px 0;
+
+	@media screen and (min-width: $tablet) {
+		padding: 50px 0;
+	}
+
+	@media screen and (min-width: $desktop) {
+		padding: 60px 0;
+	}
+}
+
+.contactUsTitle {
+	margin-bottom: 24px;
+
+	text-align: center;
+	color: #173d33;
+	font-family: Oswald;
+	font-size: 28px;
+	line-height: 1;
+	text-transform: uppercase;
+
+	@media screen and (min-width: $tablet) {
+		margin-bottom: 40px;
+
+		font-size: 36px;
+	}
+
+	@media screen and (min-width: $desktop) {
+		margin-bottom: 120px;
+
+		font-size: 48px;
+	}
+}
+
+.contactUsContentWrapper {
+	@media screen and (min-width: $tablet) {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	@media screen and (min-width: $desktop) {
+		gap: 178px;
+	}
+}
+
+.contactSocialList {
+	margin-bottom: 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+
+	@media screen and (min-width: $tablet) {
+		margin-bottom: 0;
+		max-width: 244px;
+	}
+
+	@media screen and (min-width: $desktop) {
+		max-width: 466px;
+	}
+}
+
+.contactSocialItem {
+}
+
+.contactSocialTitle {
+	margin-bottom: 8px;
+
+	color: #173d33;
+	text-align: justify;
+	font-family: Fira Sans;
+	font-size: 16px;
+	letter-spacing: -0.64px;
+
+	@media screen and (min-width: $desktop) {
+		margin-bottom: 16px;
+	}
+}
+
+.contactLink {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+
+	color: #173d33;
+	text-align: justify;
+	font-family: Fira Sans;
+	font-size: 20px;
+	letter-spacing: -0.8px;
+
+	&:hover,
+	&:focus {
+		color: #97d28b;
+	}
+
+	@media screen and (min-width: $desktop) {
+		font-size: 24px;
+		letter-spacing: -0.96px;
+	}
+}
+
+.iconWrapper {
+	display: flex;
+	align-items: center;
+}
+
+.contactSocialLinkWrapper {
+	display: flex;
+	gap: 8px;
+}
+
+.contactSocialLink {
+	padding: 12px;
+
+	color: #173d33;
+
+	&:hover,
+	&:focus {
+		color: #97d28b;
+	}
+
+	@media screen and (min-width: $desktop) {
+		padding: 0;
+	}
+}
+
+.contactSocialIcon {
+	stroke: currentColor;
+}
