@@ -1,21 +1,22 @@
 import { useMediaQuery } from 'react-responsive';
 
-import { ReactComponent as OpenIcon } from 'assets/images/values/icons/maximize-circle.svg';
-import { ReactComponent as ResponsIcon } from 'assets/images/values/icons/global-edit.svg';
-import { ReactComponent as InnovationIcon } from 'assets/images/values/icons/cpu-charge.svg';
-import { ReactComponent as QualityIcon } from 'assets/images/values/icons/ranking.svg';
+import {
+    OpenIcon,
+    ResponsIcon,
+    InnovationIcon,
+    QualityIcon,
+} from 'assets/images/values/icons';
 
-// tablet images
-import firstImgTablet from 'assets/images/values/firstImgValuesTablet.jpg';
-import firstImgTablet2x from 'assets/images/values/firstImgValuesTablet@2x.jpg';
-import secondImgTablet from 'assets/images/values/secondImgValuesTablet.jpg';
-import secondImgTablet2x from 'assets/images/values/secondImgValuesTablet@2x.jpg';
-
-// desktop images
-import firstImgDesktop from 'assets/images/values/firstImgValuesDesktop.jpg';
-import firstImgDesktop2x from 'assets/images/values/firstImgValuesDesktop@2x.jpg';
-import secondImgDesktop from 'assets/images/values/secondImgValuesDesktop.jpg';
-import secondImgDesktop2x from 'assets/images/values/secondImgValuesDesktop@2x.jpg';
+import {
+    firstImgTablet,
+    firstImgTablet2x,
+    secondImgTablet,
+    secondImgTablet2x,
+    firstImgDesktop,
+    firstImgDesktop2x,
+    secondImgDesktop,
+    secondImgDesktop2x,
+} from 'assets/images/values';
 
 import styles from './Values.module.scss';
 const {
@@ -53,7 +54,9 @@ export function Values() {
                 <ul className={valuesList}>
                     <li className={valuesItem}>
                         <h3 className={itemTitle}>
-                            <OpenIcon className={valuesItemIcon} />
+                            <div>
+                                <OpenIcon className={valuesItemIcon} />
+                            </div>
                             <span>Openness</span>
                         </h3>
                         <p className={itemPreTitle}>
@@ -62,7 +65,9 @@ export function Values() {
                     </li>
                     <li className={valuesItem}>
                         <h3 className={itemTitle}>
-                            <ResponsIcon className={valuesItemIcon} />
+                            <div>
+                                <ResponsIcon className={valuesItemIcon} />
+                            </div>
                             <span>Responsibility</span>
                         </h3>
                         <p className={itemPreTitle}>
@@ -73,7 +78,9 @@ export function Values() {
                     </li>
                     <li className={valuesItem}>
                         <h3 className={itemTitle}>
-                            <InnovationIcon className={valuesItemIcon} />
+                            <div>
+                                <InnovationIcon className={valuesItemIcon} />
+                            </div>
                             <span>Innovation</span>
                         </h3>
                         <p className={itemPreTitle}>
@@ -83,7 +90,9 @@ export function Values() {
                     </li>
                     <li className={valuesItem}>
                         <h3 className={itemTitle}>
-                            <QualityIcon className={valuesItemIcon} />
+                            <div>
+                                <QualityIcon className={valuesItemIcon} />
+                            </div>
                             <span>Quality</span>
                         </h3>
                         <p className={itemPreTitle}>

@@ -1,7 +1,6 @@
 import { useRef } from 'react';
 
-import { ReactComponent as PlusIcon } from 'assets/images/faq/icons/plus.svg';
-import { ReactComponent as MinusIcon } from 'assets/images/faq/icons/minus.svg';
+import { PlusIcon, MinusIcon } from 'assets/images/faq/icons';
 
 export function FAQItem({ faqItem, onClick, isOpen }) {
     const faqAnswerRef = useRef(null);

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-scroll';
 import { useMediaQuery } from 'react-responsive';
 
-import { findHeaderHeight } from 'helpers/findHeaderHeight';
+import { findHeaderHeight } from 'helpers';
 
 import footerLogo from 'assets/images/footer/logo.png';
 import {

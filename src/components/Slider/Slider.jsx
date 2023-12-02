@@ -4,12 +4,11 @@ import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
 
-import { limit } from 'helpers/limit';
+import { limit } from 'helpers';
 
-import firstCardImgDesktop from 'assets/images/cases/firstSliderImgDesktop.jpg';
-import secondCardImgDesktop from 'assets/images/cases/secondSliderImgDesktop.jpg';
+import { firstCardImgDesktop, secondCardImgDesktop } from 'assets/images/cases';
 
-import { ReactComponent as TopRightArrowIcon } from 'assets/images/cases/icons/arrow-top-right.svg';
+import { TopRightArrowIcon } from 'assets/images/cases/icons';
 
 import './Slider.scss';
 
