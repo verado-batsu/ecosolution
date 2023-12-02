@@ -92,6 +92,7 @@ export function ContactUs() {
                             </h3>
                             <div className={contactSocialLinkWrapper}>
                                 <a
+                                    aria-label="open facebook"
                                     className={contactSocialLink}
                                     href="."
                                     rel="noopener noreferrer nofollow"
@@ -101,6 +102,7 @@ export function ContactUs() {
                                     />
                                 </a>
                                 <a
+                                    aria-label="open instargam"
                                     className={contactSocialLink}
                                     href="."
                                     rel="noopener noreferrer nofollow"

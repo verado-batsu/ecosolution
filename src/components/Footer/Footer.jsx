@@ -53,6 +53,7 @@ export function Footer() {
                             <ul className={footerSocialList}>
                                 <li className={footerSocialItem}>
                                     <a
+                                        aria-label="open facebook"
                                         className={footerSocialLink}
                                         href="."
                                         rel="noopener noreferrer nofollow"
@@ -64,6 +65,7 @@ export function Footer() {
                                 </li>
                                 <li className={footerSocialItem}>
                                     <a
+                                        aria-label="open instargam"
                                         className={footerSocialLink}
                                         href="."
                                         rel="noopener noreferrer nofollow"
@@ -91,6 +93,7 @@ export function Footer() {
                         <ul className={footerSocialList}>
                             <li className={footerSocialItem}>
                                 <a
+                                    aria-label="open facebook"
                                     className={footerSocialLink}
                                     href="."
                                     rel="noopener noreferrer nofollow"
@@ -102,6 +105,7 @@ export function Footer() {
                             </li>
                             <li className={footerSocialItem}>
                                 <a
+                                    aria-label="open instargam"
                                     className={footerSocialLink}
                                     href="."
                                     rel="noopener noreferrer nofollow"
