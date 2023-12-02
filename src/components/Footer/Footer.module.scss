@@ -44,9 +44,11 @@
 		gap: 97px;
 	}
 
-	// @media screen and (min-width: $desktop) {
-	// 	gap: 200px;
-	// }
+	@media screen and (min-width: $desktop) {
+		display: flex;
+		justify-content: space-between;
+		gap: 0;
+	}
 }
 
 .footerLogoLink {
@@ -119,6 +121,13 @@
 		grid-template-rows: 1fr;
 		gap: 97px;
 	}
+
+	@media screen and (min-width: $desktop) {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		gap: 0;
+	}
 }
 
 .footerLinkItem {
@@ -127,6 +136,14 @@
 
 	@media screen and (min-width: $tablet) {
 		display: block;
+	}
+
+	@media screen and (min-width: $desktop) {
+		display: flex;
+
+		&:first-child {
+			margin-right: 184px;
+		}
 	}
 }
 

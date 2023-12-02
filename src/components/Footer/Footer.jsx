@@ -24,7 +24,6 @@ const {
     footerSocialItem,
     footerSocialLink,
     footerSocialIcon,
-    footerBottom,
     footerLinkList,
     footerLinkItem,
     footerLink,
