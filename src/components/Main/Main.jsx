@@ -26,6 +26,7 @@ const {
     physAddress,
     mailAddress,
     mainCopy,
+    mainImgWrapper,
     windTurbineImg,
 } = styles;
 
@@ -79,21 +80,23 @@ export function Main() {
                             ecosolution &copy; 2023
                         </span>
                     </p>
-                    {isDesktop ? (
-                        <img
-                            className={windTurbineImg}
-                            srcSet={`${windTurbineDesktop} 1x, ${windTurbineDesktop2x} 2x`}
-                            src={windTurbineDesktop}
-                            alt="wind turbine clean energy"
-                        />
-                    ) : (
-                        <img
-                            className={windTurbineImg}
-                            srcSet={`${windTurbine} 1x, ${windTurbine2x} 2x`}
-                            src={windTurbine}
-                            alt="wind turbine clean energy"
-                        />
-                    )}
+                    <div className={mainImgWrapper}>
+                        {isDesktop ? (
+                            <img
+                                className={windTurbineImg}
+                                srcSet={`${windTurbineDesktop} 1x, ${windTurbineDesktop2x} 2x`}
+                                src={windTurbineDesktop}
+                                alt="wind turbine clean energy"
+                            />
+                        ) : (
+                            <img
+                                className={windTurbineImg}
+                                srcSet={`${windTurbine} 1x, ${windTurbine2x} 2x`}
+                                src={windTurbine}
+                                alt="wind turbine clean energy"
+                            />
+                        )}
+                    </div>
                 </div>
             </div>
         </section>
