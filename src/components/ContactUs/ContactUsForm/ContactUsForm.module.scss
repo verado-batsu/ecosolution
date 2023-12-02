@@ -1,0 +1,94 @@
+@import "constants/sizes";
+
+.contactForm {
+	display: flex;
+	flex-direction: column;
+	padding: 36px 12px;
+
+	background-color: #eaedf1;
+}
+
+.contactLabelsWrapper {
+	margin-bottom: 16px;
+	display: flex;
+	flex-direction: column;
+	gap: 28px;
+}
+
+.contactFormLabel {
+}
+
+.contactFormTitle {
+	margin-bottom: 8px;
+
+	color: #173d33;
+	text-align: justify;
+	font-family: Fira Sans;
+	font-size: 16px;
+	letter-spacing: -0.64px;
+}
+
+.contactFormInput {
+	width: 100%;
+	padding-bottom: 8px;
+
+	background-color: transparent;
+	border-bottom: 1px solid #97d28b;
+	color: #828382;
+	font-family: Fira Sans;
+	font-size: 18px;
+	letter-spacing: -0.72px;
+}
+
+.contactFormError {
+	color: red;
+}
+
+.contactFormText {
+	width: 100%;
+	height: 147px;
+
+	background-color: transparent;
+	border-bottom: 1px solid #97d28b;
+	color: #828382;
+	font-family: Fira Sans;
+	font-size: 18px;
+	letter-spacing: -0.72px;
+	resize: none;
+}
+
+.contactFormSubmit {
+	display: flex;
+	align-items: center;
+	align-self: flex-end;
+	gap: 12px;
+	height: 39px;
+	padding: 4px 4px 4px 16px;
+
+	border-radius: 500px;
+	border: 1px solid #97d28b;
+	color: #173d33;
+	font-family: Fira Sans;
+	font-size: 16px;
+	line-height: calc(18px / 16px);
+	letter-spacing: -0.64px;
+
+	&:hover,
+	&:focus {
+		color: #fff;
+		background-color: #97d28b;
+	}
+}
+
+.contactSubmitIconWrapper {
+	display: flex;
+	align-items: center;
+	padding: 8px;
+
+	border-radius: 100px;
+	background: #97d28b;
+}
+
+.contactFromArrowIcon {
+	stroke: currentColor;
+}

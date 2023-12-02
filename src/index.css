@@ -50,6 +50,16 @@ ol {
 	margin: 0;
 }
 
+:focus,
+:active {
+	outline: none;
+}
+
+a:focus,
+a:active {
+	outline: none;
+}
+
 a,
 a:visited,
 a:hover {
@@ -77,6 +87,7 @@ input,
 button,
 textarea {
 	font-family: inherit;
+	border: none;
 }
 
 input::-ms-clear {

@@ -1,0 +1,86 @@
+@import "constants/sizes";
+
+.contactUs {
+	padding: 18px 0;
+
+	@media screen and (min-width: $tablet) {
+		padding: 50px 0;
+	}
+
+	@media screen and (min-width: $desktop) {
+		padding: 60px 0;
+	}
+}
+
+.contactUsTitle {
+	margin-bottom: 24px;
+
+	text-align: center;
+	color: #173d33;
+	font-family: Oswald;
+	font-size: 28px;
+	line-height: 1;
+	text-transform: uppercase;
+}
+
+.contactSocialList {
+	margin-bottom: 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+}
+
+.contactSocialItem {
+}
+
+.contactSocialTitle {
+	margin-bottom: 8px;
+
+	color: #173d33;
+	text-align: justify;
+	font-family: Fira Sans;
+	font-size: 16px;
+	letter-spacing: -0.64px;
+}
+
+.contactLink {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+
+	color: #173d33;
+	text-align: justify;
+	font-family: Fira Sans;
+	font-size: 20px;
+	letter-spacing: -0.8px;
+
+	&:hover,
+	&:focus {
+		color: #97d28b;
+	}
+}
+
+.iconWrapper {
+	display: flex;
+	align-items: center;
+}
+
+.contactSocialLinkWrapper {
+	display: flex;
+	gap: 8px;
+}
+
+.contactSocialLink {
+	padding: 12px;
+
+	color: #173d33;
+
+	&:hover,
+	&:focus {
+		color: #97d28b;
+	}
+}
+
+.contactSocialIcon {
+	stroke: currentColor;
+}

@@ -1,30 +1,99 @@
+import { ContactUsForm } from './ContactUsForm/ContactUsForm';
+
+import {
+    PhoneIcon,
+    SmsIcon,
+    MapIcon,
+    FacebookIcon,
+    InstagramIcon,
+} from 'assets/images/contact-us/icons';
+
+import styles from './ContactUs.module.scss';
+const {
+    contactUs,
+    contactUsTitle,
+    contactSocialList,
+    contactSocialItem,
+    contactSocialTitle,
+    contactSocialLinkWrapper,
+    contactLink,
+    contactSocialLink,
+    iconWrapper,
+    contactSocialIcon,
+} = styles;
+
 export function ContactUs() {
     return (
-        <section name="Contact Us">
+        <section name="Contact Us" className={contactUs}>
             <div className="container">
-                <h1>CONTACT US</h1>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Quasi, molestiae quam ipsa illum, minima error voluptatum
-                    reprehenderit nisi labore eum et dolore voluptate, odio quod
-                    velit possimus sequi nobis vel! Suscipit cumque, sapiente
-                    iusto id mollitia perferendis dolore minima voluptate quia
-                    voluptatum officiis praesentium totam, voluptas, libero rem?
-                    Possimus amet quibusdam, doloribus quis esse labore
-                    distinctio ea non nihil rem. Quidem, omnis voluptas? Vitae,
-                    dolorem quasi numquam, quidem magni praesentium cupiditate
-                    perferendis deserunt laudantium adipisci quo ipsam velit
-                    doloremque omnis fuga? Delectus, repudiandae temporibus
-                    vitae at dolorum molestiae cum quasi. Quam dolorem in iure
-                    iusto corrupti voluptatibus, excepturi explicabo placeat ut
-                    nisi obcaecati libero. Facilis incidunt, quas tenetur
-                    perspiciatis dolorem, natus beatae molestiae facere dolor
-                    labore odio provident voluptate cupiditate! Iusto magnam
-                    itaque numquam in eum perspiciatis, quisquam sit pariatur.
-                    Eos facere nulla a ut ab mollitia rerum laborum tempora,
-                    vitae tenetur omnis atque fugiat laboriosam incidunt
-                    inventore nobis obcaecati?
-                </p>
+                <h2 className={contactUsTitle}>Contact us</h2>
+                <ul className={contactSocialList}>
+                    <li className={contactSocialItem}>
+                        <h3 className={contactSocialTitle}>Phone:</h3>
+                        <div>
+                            <a className={contactLink} href="tel:+380981234567">
+                                <div className={iconWrapper}>
+                                    <PhoneIcon className={contactSocialIcon} />
+                                </div>
+                                <span>38 (098) 12 34 567</span>
+                            </a>
+                            <a className={contactLink} href="tel:+380981234567">
+                                <div className={iconWrapper}>
+                                    <PhoneIcon className={contactSocialIcon} />
+                                </div>
+                                <span>38 (093) 12 34 567</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li className={contactSocialItem}>
+                        <h3 className={contactSocialTitle}>E-mail:</h3>
+                        <a
+                            className={contactLink}
+                            href="mailto:office@ecosolution.com"
+                        >
+                            <div className={iconWrapper}>
+                                <SmsIcon className={contactSocialIcon} />
+                            </div>
+                            <span>office@ecosolution.com</span>
+                        </a>
+                    </li>
+                    <li className={contactSocialItem}>
+                        <h3 className={contactSocialTitle}>Address:</h3>
+                        <a
+                            className={contactLink}
+                            href="https://maps.app.goo.gl/4wEMGGNfCrechPkS6"
+                            target="_blank"
+                            rel="noopener noreferrer nofollow"
+                        >
+                            <div className={iconWrapper}>
+                                <MapIcon className={contactSocialIcon} />
+                            </div>
+                            <span>
+                                79005, Ukraine, Lvivstreet. Shota Rustaveli, 7
+                            </span>
+                        </a>
+                    </li>
+                    <li className={contactSocialItem}>
+                        <h3 className={contactSocialTitle}>Social Networks:</h3>
+                        <div className={contactSocialLinkWrapper}>
+                            <a
+                                className={contactSocialLink}
+                                href="."
+                                rel="noopener noreferrer nofollow"
+                            >
+                                <FacebookIcon className={contactSocialIcon} />
+                            </a>
+                            <a
+                                className={contactSocialLink}
+                                href="."
+                                rel="noopener noreferrer nofollow"
+                            >
+                                <InstagramIcon className={contactSocialIcon} />
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+                <ContactUsForm />
             </div>
         </section>
     );
