@@ -211,6 +211,11 @@
 	}
 }
 
+.mainImgWrapper {
+	display: flex;
+	justify-content: center;
+}
+
 .windTurbineImg {
 	display: block;
 	max-width: 100%;
