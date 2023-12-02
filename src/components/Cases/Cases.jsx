@@ -26,10 +26,16 @@ export function Cases() {
                     <div className={casesNavigateWrapper}>
                         <div className={`${counterOfSlides} pagination`}></div>
                         <div className={arrowsOfSlider}>
-                            <button className={`${navigateSliderBtn} prev`}>
+                            <button
+                                aria-label="previous slide"
+                                className={`${navigateSliderBtn} prev`}
+                            >
                                 <LeftArrowIcon className={leftArrowIcon} />
                             </button>
-                            <button className={`${navigateSliderBtn} next`}>
+                            <button
+                                aria-label="next slide"
+                                className={`${navigateSliderBtn} next`}
+                            >
                                 <RightArrowIcon className={rightArrowIcon} />
                             </button>
                         </div>

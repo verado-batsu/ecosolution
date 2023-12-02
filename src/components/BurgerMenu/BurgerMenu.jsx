@@ -56,7 +56,12 @@ export function BurgerMenu() {
 
     return (
         <div className={headerMenu}>
-            <button type="button" onClick={handleMenuClick} className={menuBtn}>
+            <button
+                aria-label="open burger menu"
+                type="button"
+                onClick={handleMenuClick}
+                className={menuBtn}
+            >
                 <MenuIcon className={menuIcon} />
             </button>
             <nav
@@ -103,12 +108,20 @@ export function BurgerMenu() {
                         </ul>
                         <ul className={socialList}>
                             <li className={socialItem}>
-                                <a className={socialLink} href="./">
+                                <a
+                                    aria-label="open facebook"
+                                    className={socialLink}
+                                    href="./"
+                                >
                                     <FacebookIcon className={socialIcon} />
                                 </a>
                             </li>
                             <li className={socialItem}>
-                                <a className={socialLink} href="./">
+                                <a
+                                    aria-label="open instargam"
+                                    className={socialLink}
+                                    href="./"
+                                >
                                     <InstagramIcon className={socialIcon} />
                                 </a>
                             </li>

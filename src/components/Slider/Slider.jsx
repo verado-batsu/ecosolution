@@ -57,7 +57,11 @@ export function Slider() {
                                 40
                             )}
                         </h3>
-                        <button className="slider__btn" type="button">
+                        <button
+                            aria-label="open article"
+                            className="slider__btn"
+                            type="button"
+                        >
                             <TopRightArrowIcon className="slider__card-icon" />
                         </button>
                     </div>
@@ -83,7 +87,11 @@ export function Slider() {
                                 40
                             )}
                         </h3>
-                        <button className="slider__btn" type="button">
+                        <button
+                            aria-label="open article"
+                            className="slider__btn"
+                            type="button"
+                        >
                             <TopRightArrowIcon className="slider__card-icon" />
                         </button>
                     </div>
@@ -109,7 +117,11 @@ export function Slider() {
                                 40
                             )}
                         </h3>
-                        <button className="slider__btn" type="button">
+                        <button
+                            aria-label="open article"
+                            className="slider__btn"
+                            type="button"
+                        >
                             <TopRightArrowIcon className="slider__card-icon" />
                         </button>
                     </div>
@@ -135,7 +147,11 @@ export function Slider() {
                                 40
                             )}
                         </h3>
-                        <button className="slider__btn" type="button">
+                        <button
+                            aria-label="open article"
+                            className="slider__btn"
+                            type="button"
+                        >
                             <TopRightArrowIcon className="slider__card-icon" />
                         </button>
                     </div>
@@ -161,7 +177,11 @@ export function Slider() {
                                 40
                             )}
                         </h3>
-                        <button className="slider__btn" type="button">
+                        <button
+                            aria-label="open article"
+                            className="slider__btn"
+                            type="button"
+                        >
                             <TopRightArrowIcon className="slider__card-icon" />
                         </button>
                     </div>
