@@ -1,0 +1,156 @@
+@import "constants/sizes";
+
+.footer {
+	padding-top: 18px;
+	padding-bottom: 24px;
+
+	@media screen and (min-width: $tablet) {
+		padding-top: 50px;
+		padding-bottom: 40px;
+	}
+
+	@media screen and (min-width: $desktop) {
+		padding-top: 60px;
+	}
+}
+
+.footerBody {
+	&::before {
+		content: "";
+		display: block;
+		height: 1px;
+		margin-bottom: 24px;
+
+		background-color: #97d28b;
+
+		@media screen and (min-width: $tablet) {
+			margin-bottom: 40px;
+		}
+	}
+}
+
+.footerTop {
+	margin-bottom: 24px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 19px;
+
+	@media screen and (min-width: $tablet) {
+		margin-bottom: 16px;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr;
+		gap: 97px;
+	}
+
+	// @media screen and (min-width: $desktop) {
+	// 	gap: 200px;
+	// }
+}
+
+.footerLogoLink {
+}
+
+.logo {
+}
+
+.footerUp {
+	display: flex;
+	align-items: center;
+	height: 32px;
+	padding: 8px;
+
+	border-radius: 100px;
+	background-color: #97d28b;
+
+	cursor: pointer;
+
+	&:hover,
+	&:focus {
+		color: #dcefd8;
+	}
+
+	@media screen and (min-width: $tablet) {
+		justify-self: end;
+	}
+}
+
+.footerArrowUpIcon {
+	stroke: currentColor;
+}
+
+.footerSocialList {
+	margin-bottom: 24px;
+	display: flex;
+	justify-content: center;
+	gap: 8px;
+
+	@media screen and (min-width: $tablet) {
+		margin-bottom: 0;
+		justify-self: start;
+	}
+}
+
+.footerSocialItem {
+}
+
+.footerSocialLink {
+	color: #173d33;
+
+	&:hover,
+	&:focus {
+		color: #97d28b;
+	}
+}
+
+.footerSocialIcon {
+	stroke: currentColor;
+}
+
+.footerLinkList {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+
+	@media screen and (min-width: $tablet) {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr;
+		gap: 97px;
+	}
+}
+
+.footerLinkItem {
+	display: flex;
+	justify-content: center;
+
+	@media screen and (min-width: $tablet) {
+		display: block;
+	}
+}
+
+.footerLink {
+	text-align: center;
+	color: #173d33;
+	font-family: Fira Sans;
+	font-size: 16px;
+	letter-spacing: -0.64px;
+
+	&:hover,
+	&:focus {
+		color: #97d28b;
+	}
+}
+
+.footerCopy {
+	text-align: center;
+	color: #173d33;
+	font-family: Fira Sans;
+	font-size: 16px;
+	letter-spacing: -0.64px;
+
+	@media screen and (min-width: $tablet) {
+		text-align: end;
+	}
+}
