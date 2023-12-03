@@ -29,7 +29,7 @@ export function Electricity() {
     }, []);
 
     return (
-        <section className={electricity}>
+        <section name="electricity" className={electricity}>
             <div className="container">
                 <div className={electricityWrapper}>
                     <h2 className={electricityTitle}>

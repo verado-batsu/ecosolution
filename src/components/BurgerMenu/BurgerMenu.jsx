@@ -28,6 +28,7 @@ const {
     menuList,
     menuItem,
     menuLink,
+    menuLinkActive,
     arrowIcon,
     socialList,
     socialItem,
@@ -35,7 +36,7 @@ const {
     socialIcon,
 } = styles;
 
-const arrOfSection = ['Main', 'Values', 'Cases', 'FAQ', 'Contact Us'];
+const arrOfSection = ['Main', 'About', 'Cases', 'FAQ', 'Contact Us'];
 
 export function BurgerMenu() {
     const [isMenuShown, setIsMenuShown] = useState(false);
@@ -92,12 +93,14 @@ export function BurgerMenu() {
                                 return (
                                     <li key={title} className={menuItem}>
                                         <Link
+                                            activeClass={menuLinkActive}
                                             onClick={handleMenuClick}
                                             to={title}
                                             className={menuLink}
                                             smooth={true}
                                             offset={Number(`-${headerHeight}`)}
                                             duration={500}
+                                            spy={true}
                                         >
                                             <span>{title}</span>
                                             <ArrowIcon className={arrowIcon} />

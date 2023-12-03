@@ -5,16 +5,13 @@
 
 .slider__card {
 	max-width: 320px;
-	height: 318px;
 
 	@media screen and (min-width: $tablet) {
 		max-width: 342px;
-		height: 322px;
 	}
 
 	@media screen and (min-width: $desktop) {
 		max-width: 596px;
-		height: 506px;
 	}
 }
 
@@ -47,18 +44,20 @@
 
 .slider__title-wrapper {
 	display: flex;
-	// justify-content: space-between;
 	gap: 61px;
 	margin-bottom: 22px;
+	height: 63px;
 
 	order: 1;
 
 	@media screen and (min-width: $tablet) {
 		gap: 64px;
+		height: 71px;
 	}
 
 	@media screen and (min-width: $desktop) {
 		gap: 83px;
+		height: auto;
 	}
 }
 
@@ -88,8 +87,8 @@
 
 	&:hover,
 	&:focus {
-		background-color: #83e288;
-		color: #fff;
+		background-color: #173d33;
+		color: #97d28b;
 	}
 }
 

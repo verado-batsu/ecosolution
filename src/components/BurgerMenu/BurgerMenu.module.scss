@@ -16,7 +16,6 @@
 	&:hover,
 	&:focus {
 		background-color: #97d28b;
-		color: #fff;
 	}
 }
 
@@ -34,17 +33,11 @@
 	height: 100%;
 	padding: 36px 0;
 
-	// opacity: 0;
+	background-color: rgba(23, 61, 51, 0.25);
+	backdrop-filter: blur(2px);
+	opacity: 0;
 	pointer-events: none;
 	transition: opacity 0.3s ease;
-
-	@media screen and (min-width: $tablet) {
-		background-color: rgba(23, 61, 51, 0.25);
-		backdrop-filter: blur(2px);
-
-		opacity: 0;
-		transition: opacity 0.3s ease;
-	}
 }
 
 .menuBodyActive {
@@ -141,7 +134,7 @@
 	align-items: center;
 	gap: 8px;
 
-	color: #fff;
+	color: rgba(255, 255, 255, 0.25);
 	font-family: Fira Sans;
 	font-size: 24px;
 	letter-spacing: -0.96px;
@@ -150,8 +143,12 @@
 
 	&:hover,
 	&:focus {
-		color: #97d28b;
+		color: #fff;
 	}
+}
+
+.menuLinkActive {
+	color: #97d28b;
 }
 
 .arrowIcon {

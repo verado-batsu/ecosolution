@@ -1,8 +1,10 @@
 @import "constants/sizes";
 
-.values {
+.about {
 	padding-top: 18px;
 	padding-bottom: 18px;
+
+	background-color: #f3f5fa;
 
 	@media screen and (min-width: $tablet) {
 		padding-top: 50px;
@@ -15,7 +17,7 @@
 	}
 }
 
-.valuesTitleWrapper {
+.aboutTitleWrapper {
 	margin-bottom: 36px;
 
 	@media screen and (min-width: $tablet) {
@@ -42,7 +44,7 @@
 	}
 }
 
-.valuesTitle {
+.aboutTitle {
 	margin-bottom: 24px;
 
 	color: #173d33;
@@ -64,7 +66,7 @@
 	}
 }
 
-.valuesPreTitle {
+.aboutPreTitle {
 	color: #173d33;
 	font-family: Fira Sans;
 	font-size: 16px;
@@ -74,7 +76,7 @@
 	order: 3;
 }
 
-.valuesList {
+.aboutList {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr 1fr;
@@ -90,7 +92,7 @@
 	}
 }
 
-.valuesItem {
+.aboutItem {
 	display: flex;
 	flex-direction: column;
 	padding: 13px 12px 12px 12px;
@@ -150,7 +152,7 @@
 	}
 }
 
-.valuesItemIcon {
+.aboutItemIcon {
 	@media screen and (min-width: $desktop) {
 		width: 24px;
 		height: 24px;
@@ -172,19 +174,19 @@
 	}
 }
 
-.valuesItemImg1 {
+.aboutItemImg1 {
 	grid-row-start: 1;
 	grid-column-start: 3;
 	grid-column-end: 5;
 }
 
-.valuesItemImg2 {
+.aboutItemImg2 {
 	grid-row-start: 2;
 	grid-column-start: 1;
 	grid-column-end: 3;
 }
 
-.valuesImg {
+.aboutImg {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;

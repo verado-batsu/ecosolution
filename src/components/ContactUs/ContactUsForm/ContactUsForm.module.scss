@@ -63,8 +63,13 @@
 	}
 }
 
+.contactFormInputError {
+	border-color: #d28b8b;
+}
+
 .contactFormError {
-	color: red;
+	text-align: end;
+	color: #d28b8b;
 }
 
 .contactFormText {
@@ -103,8 +108,9 @@
 
 	&:hover,
 	&:focus {
-		color: #fff;
-		background-color: #97d28b;
+		color: #97d28b;
+		background-color: #173d33;
+		border-color: #173d33;
 	}
 }
 
@@ -129,6 +135,6 @@
 	background: #97d28b;
 }
 
-.contactFromArrowIcon {
-	stroke: currentColor;
+.contactFormArrowIcon {
+	stroke: #173d33;
 }

@@ -10,12 +10,13 @@ const {
     contactFormLabel,
     contactFormTitle,
     contactFormInput,
+    contactFormInputError,
     contactFormError,
     contactFormSubmit,
     disabled,
     contactFormText,
     contactSubmitIconWrapper,
-    contactFromArrowIcon,
+    contactFormArrowIcon,
 } = styles;
 
 const userSchema = yup.object({
@@ -42,15 +43,39 @@ export function ContactUsForm() {
             onSubmit={handleSubmit}
             validationSchema={userSchema}
         >
-            {({ errors }) => {
+            {({ errors, touched }) => {
                 const isError = Object.keys(errors).length !== 0;
+                let isNameError = false;
+                let isEmailError = false;
+                let isPhoneError = false;
+
+                Object.keys(errors).forEach(errorName => {
+                    Object.keys(touched).forEach(touch => {
+                        if (errorName === 'name' && touch === 'name') {
+                            isNameError = true;
+                        }
+
+                        if (errorName === 'email' && touch === 'email') {
+                            isEmailError = true;
+                        }
+
+                        if (errorName === 'phone' && touch === 'phone') {
+                            isPhoneError = true;
+                        }
+                    });
+                });
+
                 return (
                     <Form className={contactForm}>
                         <div className={contactLabelsWrapper}>
                             <label className={contactFormLabel}>
-                                <p className={contactFormTitle}>Full name:</p>
+                                <p className={contactFormTitle}>* Full name:</p>
                                 <Field
-                                    className={contactFormInput}
+                                    className={
+                                        isNameError
+                                            ? `${contactFormInput} ${contactFormInputError}`
+                                            : contactFormInput
+                                    }
                                     type="text"
                                     name="name"
                                     placeholder="John Rosie"
@@ -62,9 +87,13 @@ export function ContactUsForm() {
                                 />
                             </label>
                             <label className={contactFormLabel}>
-                                <p className={contactFormTitle}>E-mail:</p>
+                                <p className={contactFormTitle}>* E-mail:</p>
                                 <Field
-                                    className={contactFormInput}
+                                    className={
+                                        isEmailError
+                                            ? `${contactFormInput} ${contactFormInputError}`
+                                            : contactFormInput
+                                    }
                                     type="email"
                                     name="email"
                                     placeholder="johnrosie@gmail.com"
@@ -76,9 +105,13 @@ export function ContactUsForm() {
                                 />
                             </label>
                             <label className={contactFormLabel}>
-                                <p className={contactFormTitle}>Phone:</p>
+                                <p className={contactFormTitle}>* Phone:</p>
                                 <Field
-                                    className={contactFormInput}
+                                    className={
+                                        isPhoneError
+                                            ? `${contactFormInput} ${contactFormInputError}`
+                                            : contactFormInput
+                                    }
                                     type="text"
                                     name="phone"
                                     placeholder="380961234567"
@@ -112,7 +145,7 @@ export function ContactUsForm() {
                             <span>Send</span>
                             <div className={contactSubmitIconWrapper}>
                                 <ArrowRightIcon
-                                    className={contactFromArrowIcon}
+                                    className={contactFormArrowIcon}
                                 />
                             </div>
                         </button>
