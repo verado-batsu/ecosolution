@@ -4,15 +4,7 @@ import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
 
-import { limit } from 'helpers';
-
-import {
-    firstCardImg,
-    secondCardImg,
-    thirdCardImg,
-    fourthCardImg,
-    fifthCardImg,
-} from 'assets/images/cases';
+import { sliderData } from 'data/sliderData';
 
 import { TopRightArrowIcon } from 'assets/images/cases/icons';
 
@@ -49,7 +41,33 @@ export function Slider() {
                 },
             }}
         >
-            <SwiperSlide className="slider__card">
+            {sliderData.map(({ id, img, alt, title, description, date }) => {
+                return (
+                    <SwiperSlide key={id} className="slider__card">
+                        <img className="slider__img" src={img} alt={alt} />
+                        <div className="slider__card-info-box">
+                            <div className="slider__title-wrapper">
+                                <h3 className="slider__title">{title}</h3>
+                                <button
+                                    aria-label="open article"
+                                    className="slider__btn"
+                                    type="button"
+                                >
+                                    <TopRightArrowIcon className="slider__card-icon" />
+                                </button>
+                            </div>
+                            <div className="slider__descr-wrapper">
+                                <p className="slider__info-descr">
+                                    {description}
+                                </p>
+                                <p className="slider__date">{date}</p>
+                            </div>
+                        </div>
+                    </SwiperSlide>
+                );
+            })}
+
+            {/* <SwiperSlide className="slider__card">
                 <img
                     className="slider__img"
                     src={firstCardImg}
@@ -58,8 +76,8 @@ export function Slider() {
                 <div className="slider__card-info-box">
                     <div className="slider__title-wrapper">
                         <h3 className="slider__title">
-                            'Lviv Region, Radekhiv town Private Enterprise
-                            “ZAKHIDNYI BUH”'
+                            Lviv Region, Radekhiv town Private Enterprise
+                            “ZAKHIDNYI BUH”
                         </h3>
                         <button
                             aria-label="open article"
@@ -71,7 +89,7 @@ export function Slider() {
                     </div>
                     <div className="slider__descr-wrapper">
                         <p className="slider__info-descr">
-                            'Wind Power for auto field irrigation'
+                            Wind Power for auto field irrigation
                         </p>
                         <p className="slider__date">July 2023</p>
                     </div>
@@ -86,7 +104,7 @@ export function Slider() {
                 <div className="slider__card-info-box">
                     <div className="slider__title-wrapper">
                         <h3 className="slider__title">
-                            'Zhytomyr city Private Enterprise “Bosch”'
+                            Zhytomyr city Private Enterprise “Bosch”
                         </h3>
                         <button
                             aria-label="open article"
@@ -98,7 +116,7 @@ export function Slider() {
                     </div>
                     <div className="slider__descr-wrapper">
                         <p className="slider__info-descr">
-                            'Solar Panels for industrial use'
+                            Solar Panels for industrial use
                         </p>
                         <p className="slider__date">November 2023</p>
                     </div>
@@ -180,7 +198,7 @@ export function Slider() {
                         <p className="slider__date">May 2021</p>
                     </div>
                 </div>
-            </SwiperSlide>
+            </SwiperSlide> */}
         </Swiper>
     );
 }
