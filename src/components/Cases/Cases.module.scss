@@ -3,6 +3,8 @@
 .cases {
 	padding: 18px 0;
 
+	background-color: #f3f5fa;
+
 	@media screen and (min-width: $tablet) {
 		padding: 50px 0;
 	}
@@ -96,11 +98,12 @@
 
 	border-radius: 100px;
 	border: 1px solid #173d33;
+	color: #173d33;
 
 	&:hover,
 	&:focus {
-		border: 1px solid #dcefd8;
-		background-color: #dcefd8;
+		border-color: #97d28b;
+		color: #97d28b;
 	}
 
 	@media screen and (min-width: $desktop) {
@@ -111,7 +114,9 @@
 }
 
 .leftArrowIcon {
+	stroke: currentColor;
 }
 
 .rightArrowIcon {
+	stroke: currentColor;
 }

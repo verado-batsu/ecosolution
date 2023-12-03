@@ -1,16 +1,15 @@
 @import "constants/sizes";
 
 .main {
-	padding-top: 110px;
 	padding-bottom: 18px;
 
+	background-color: #f3f5fa;
+
 	@media screen and (min-width: $tablet) {
-		padding-top: 128px;
 		padding-bottom: 50px;
 	}
 
 	@media screen and (min-width: $desktop) {
-		padding-top: 176px;
 		padding-bottom: 60px;
 	}
 }
@@ -130,8 +129,9 @@
 
 	&:hover,
 	&:focus {
-		color: #fff;
-		background-color: #97d28b;
+		color: #97d28b;
+		background-color: #173d33;
+		border-color: #173d33;
 	}
 
 	@media screen and (min-width: $tablet) {
@@ -149,7 +149,7 @@
 }
 
 .mainArrowIcon {
-	stroke: currentColor;
+	stroke: #173d33;
 }
 
 .mainBottomWrapper {
@@ -185,7 +185,8 @@
 	}
 
 	@media screen and (min-width: $desktop) {
-		margin-right: 492px;
+		width: 289px;
+		margin-right: 430px;
 	}
 }
 
@@ -199,7 +200,7 @@
 	}
 
 	@media screen and (min-width: $desktop) {
-		margin-right: 167px;
+		margin-right: 70px;
 	}
 }
 

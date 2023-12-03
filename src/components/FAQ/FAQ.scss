@@ -3,6 +3,8 @@
 .faq {
 	padding: 18px 0;
 
+	background-color: #f3f5fa;
+
 	@media screen and (min-width: $tablet) {
 		padding: 50px 0;
 	}
@@ -197,20 +199,18 @@
 
 	cursor: pointer;
 
-	&::after {
-		content: "";
-		width: 14px;
-		height: 14px;
-		border-radius: 50%;
-		background-color: #173d33;
-	}
-
 	&:hover,
 	&:focus {
-		color: #fff;
-
-		&::after {
-			background-color: #fff;
-		}
+		color: #97d28b;
+		background-color: #173d33;
 	}
+}
+
+.arrowdown-icon-wrapper {
+	display: flex;
+	align-items: center;
+}
+
+.arrowdown-icon {
+	fill: currentColor;
 }

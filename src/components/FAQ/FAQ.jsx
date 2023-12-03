@@ -7,6 +7,8 @@ import { faqData } from 'data/faqData';
 
 import { FAQItem } from './FAQItem';
 
+import { ArrowDownIcon } from 'assets/images/faq/icons';
+
 import './FAQ.scss';
 
 export function FAQ() {
@@ -59,6 +61,9 @@ export function FAQ() {
                                 duration={500}
                             >
                                 <span>Contact Us</span>
+                                <div className="arrowdown-icon-wrapper">
+                                    <ArrowDownIcon className="arrowdown-icon" />
+                                </div>
                             </Link>
                         </div>
                     </div>

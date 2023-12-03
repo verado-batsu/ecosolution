@@ -4,11 +4,11 @@ import { useMediaQuery } from 'react-responsive';
 
 import { findHeaderHeight } from 'helpers';
 
-import footerLogo from 'assets/images/footer/logo.png';
 import {
     ArrowUpIcon,
     FacebookIcon,
     InstagramIcon,
+    LogoIcon,
 } from 'assets/images/footer/icons';
 
 import styles from './Footer.module.scss';
@@ -18,6 +18,9 @@ const {
     footerTop,
     footerLogoLink,
     logo,
+    logoTitle,
+    logoPreTitle,
+    greenLogoPreTitle,
     footerUp,
     footerArrowUpIcon,
     footerSocialList,
@@ -47,7 +50,17 @@ export function Footer() {
                 <div className={footerBody}>
                     <div className={footerTop}>
                         <a className={footerLogoLink} href="./">
-                            <img className={logo} src={footerLogo} alt="logo" />
+                            <LogoIcon className={logo} alt="logo" />
+                            <p className={logoTitle}>ecosolution</p>
+                            <div className={logoPreTitle}>
+                                <p>
+                                    <span className={greenLogoPreTitle}>
+                                        GREEN
+                                    </span>
+                                    ERGY
+                                </p>
+                                <p>FOR LIFE</p>
+                            </div>
                         </a>
                         {isTablet || isDesktop ? (
                             <ul className={footerSocialList}>

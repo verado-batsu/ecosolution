@@ -7,11 +7,11 @@
 	width: 100%;
 	z-index: 10;
 
-	background-color: #fff;
+	background-color: #f3f5fa;
 	transition: background-color 0.3s ease;
 
 	&.scrolled {
-		background-color: #dcefd8;
+		background-color: #fff;
 	}
 }
 
@@ -29,9 +29,38 @@
 }
 
 .headerLogoLink {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+
+	color: #173d33;
+
+	&:hover,
+	&:focus {
+		color: #97d28b;
+	}
 }
 
 .logo {
+}
+
+.logoTitle {
+	font-family: "All Round Gothic Thick";
+	color: currentColor;
+	font-size: 33px;
+	letter-spacing: -1.32px;
+}
+
+.logoPreTitle {
+	font-family: "CA Saygon Text";
+	color: #173d33;
+	font-size: 10px;
+	line-height: 9px;
+	letter-spacing: -0.4px;
+}
+
+.greenLogoPreTitle {
+	color: #97d28b;
 }
 
 .menuWrapper {
@@ -54,21 +83,10 @@
 
 	cursor: pointer;
 
-	&::after {
-		content: "";
-		width: 14px;
-		height: 14px;
-		border-radius: 50%;
-		background-color: #173d33;
-	}
-
 	&:hover,
 	&:focus {
-		color: #fff;
-
-		&::after {
-			background-color: #fff;
-		}
+		color: #97d28b;
+		background-color: #173d33;
 	}
 
 	@media screen and (min-width: $tablet) {
@@ -76,4 +94,13 @@
 		align-items: center;
 		gap: 12px;
 	}
+}
+
+.arrowDownIconWrapper {
+	display: flex;
+	align-items: center;
+}
+
+.arrowDownIcon {
+	fill: currentColor;
 }

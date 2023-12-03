@@ -1,3 +1,17 @@
+@font-face {
+	font-family: "All Round Gothic Thick";
+	src: local("AllRoundGothicThick"),
+		url('assets/fonts/Demo_Fonts/Fontspring-DEMO-allroundgothic-thick.otf') format("truetype");
+	font-weight: 500;
+}
+@font-face {
+	font-family: "CA Saygon Text";
+	src: local("CA Saygon Text"),
+		url('assets/fonts/CASaygonText_Fonts/CASaygonText-Regular.ttf') format("truetype");
+	font-weight: 400;
+}
+
+
 html {
 	box-sizing: border-box;
 }

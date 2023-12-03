@@ -18,8 +18,9 @@ const {
     contactSocialTitle,
     contactSocialLinkWrapper,
     contactLink,
-    contactSocialLink,
     iconWrapper,
+    contactLinkIcon,
+    contactSocialLink,
     contactSocialIcon,
 } = styles;
 
@@ -39,7 +40,7 @@ export function ContactUs() {
                                 >
                                     <div className={iconWrapper}>
                                         <PhoneIcon
-                                            className={contactSocialIcon}
+                                            className={contactLinkIcon}
                                         />
                                     </div>
                                     <span>38 (098) 12 34 567</span>
@@ -50,7 +51,7 @@ export function ContactUs() {
                                 >
                                     <div className={iconWrapper}>
                                         <PhoneIcon
-                                            className={contactSocialIcon}
+                                            className={contactLinkIcon}
                                         />
                                     </div>
                                     <span>38 (093) 12 34 567</span>
@@ -64,7 +65,7 @@ export function ContactUs() {
                                 href="mailto:office@ecosolution.com"
                             >
                                 <div className={iconWrapper}>
-                                    <SmsIcon className={contactSocialIcon} />
+                                    <SmsIcon className={contactLinkIcon} />
                                 </div>
                                 <span>office@ecosolution.com</span>
                             </a>
@@ -78,7 +79,7 @@ export function ContactUs() {
                                 rel="noopener noreferrer nofollow"
                             >
                                 <div className={iconWrapper}>
-                                    <MapIcon className={contactSocialIcon} />
+                                    <MapIcon className={contactLinkIcon} />
                                 </div>
                                 <span>
                                     79005, Ukraine, Lvivstreet. Shota Rustaveli,

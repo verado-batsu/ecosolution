@@ -5,7 +5,8 @@ import { Link } from 'react-scroll';
 import { findHeaderHeight } from 'helpers';
 
 import { BurgerMenu } from 'components/BurgerMenu/BurgerMenu';
-import headerLogo from 'assets/images/header/logo.png';
+
+import { LogoIcon, ArrowDownIcon } from 'assets/images/header/icons';
 
 import styles from './Header.module.scss';
 const {
@@ -14,8 +15,13 @@ const {
     headerBody,
     headerLogoLink,
     logo,
+    logoTitle,
+    logoPreTitle,
+    greenLogoPreTitle,
     menuWrapper,
     getInTouch,
+    arrowDownIcon,
+    arrowDownIconWrapper,
 } = styles;
 
 export function Header() {
@@ -50,7 +56,15 @@ export function Header() {
             <div className="container">
                 <div className={headerBody}>
                     <a className={headerLogoLink} href="./">
-                        <img className={logo} src={headerLogo} alt="logo" />
+                        <LogoIcon className={logo} alt="logo" />
+                        <p className={logoTitle}>ecosolution</p>
+                        <div className={logoPreTitle}>
+                            <p>
+                                <span className={greenLogoPreTitle}>GREEN</span>
+                                ERGY
+                            </p>
+                            <p>FOR LIFE</p>
+                        </div>
                     </a>
                     <div className={menuWrapper}>
                         <BurgerMenu />
@@ -62,6 +76,9 @@ export function Header() {
                             duration={500}
                         >
                             <span>Get in touch</span>
+                            <div className={arrowDownIconWrapper}>
+                                <ArrowDownIcon className={arrowDownIcon} />
+                            </div>
                         </Link>
                     </div>
                 </div>

@@ -4,9 +4,7 @@ import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
 
-import { limit } from 'helpers';
-
-import { firstCardImgDesktop, secondCardImgDesktop } from 'assets/images/cases';
+import { sliderData } from 'data/sliderData';
 
 import { TopRightArrowIcon } from 'assets/images/cases/icons';
 
@@ -43,19 +41,43 @@ export function Slider() {
                 },
             }}
         >
-            <SwiperSlide className="slider__card">
+            {sliderData.map(({ id, img, alt, title, description, date }) => {
+                return (
+                    <SwiperSlide key={id} className="slider__card">
+                        <img className="slider__img" src={img} alt={alt} />
+                        <div className="slider__card-info-box">
+                            <div className="slider__title-wrapper">
+                                <h3 className="slider__title">{title}</h3>
+                                <button
+                                    aria-label="open article"
+                                    className="slider__btn"
+                                    type="button"
+                                >
+                                    <TopRightArrowIcon className="slider__card-icon" />
+                                </button>
+                            </div>
+                            <div className="slider__descr-wrapper">
+                                <p className="slider__info-descr">
+                                    {description}
+                                </p>
+                                <p className="slider__date">{date}</p>
+                            </div>
+                        </div>
+                    </SwiperSlide>
+                );
+            })}
+
+            {/* <SwiperSlide className="slider__card">
                 <img
                     className="slider__img"
-                    src={firstCardImgDesktop}
+                    src={firstCardImg}
                     alt="beautiful view wind turbines, grass covered field, captured holland"
                 />
                 <div className="slider__card-info-box">
                     <div className="slider__title-wrapper">
                         <h3 className="slider__title">
-                            {limit(
-                                'Lviv Region, Radekhiv town Private Enterprise “ZAKHIDNYI BUH”',
-                                40
-                            )}
+                            Lviv Region, Radekhiv town Private Enterprise
+                            “ZAKHIDNYI BUH”
                         </h3>
                         <button
                             aria-label="open article"
@@ -67,7 +89,7 @@ export function Slider() {
                     </div>
                     <div className="slider__descr-wrapper">
                         <p className="slider__info-descr">
-                            {limit('Wind Power for auto field irrigation', 36)}
+                            Wind Power for auto field irrigation
                         </p>
                         <p className="slider__date">July 2023</p>
                     </div>
@@ -76,16 +98,13 @@ export function Slider() {
             <SwiperSlide className="slider__card">
                 <img
                     className="slider__img"
-                    src={secondCardImgDesktop}
+                    src={secondCardImg}
                     alt="beautiful view wind turbines, grass covered field, captured holland"
                 />
                 <div className="slider__card-info-box">
                     <div className="slider__title-wrapper">
                         <h3 className="slider__title">
-                            {limit(
-                                'Zhytomyr city Private Enterprise “Bosch”',
-                                40
-                            )}
+                            Zhytomyr city Private Enterprise “Bosch”
                         </h3>
                         <button
                             aria-label="open article"
@@ -97,7 +116,7 @@ export function Slider() {
                     </div>
                     <div className="slider__descr-wrapper">
                         <p className="slider__info-descr">
-                            {limit('Solar Panels for industrial use', 36)}
+                            Solar Panels for industrial use
                         </p>
                         <p className="slider__date">November 2023</p>
                     </div>
@@ -106,16 +125,13 @@ export function Slider() {
             <SwiperSlide className="slider__card">
                 <img
                     className="slider__img"
-                    src={firstCardImgDesktop}
+                    src={thirdCardImg}
                     alt="beautiful view wind turbines, grass covered field, captured holland"
                 />
                 <div className="slider__card-info-box">
                     <div className="slider__title-wrapper">
                         <h3 className="slider__title">
-                            {limit(
-                                'Lviv Region, Radekhiv town Private Enterprise “ZAKHIDNYI BUH”',
-                                40
-                            )}
+                            Rivne city Private Enterprise “Biotech”
                         </h3>
                         <button
                             aria-label="open article"
@@ -126,26 +142,21 @@ export function Slider() {
                         </button>
                     </div>
                     <div className="slider__descr-wrapper">
-                        <p className="slider__info-descr">
-                            {limit('Wind Power for auto field irrigation', 36)}
-                        </p>
-                        <p className="slider__date">July 2023</p>
+                        <p className="slider__info-descr">Thermal modules</p>
+                        <p className="slider__date">October 2023</p>
                     </div>
                 </div>
             </SwiperSlide>
             <SwiperSlide className="slider__card">
                 <img
                     className="slider__img"
-                    src={secondCardImgDesktop}
+                    src={fourthCardImg}
                     alt="beautiful view wind turbines, grass covered field, captured holland"
                 />
                 <div className="slider__card-info-box">
                     <div className="slider__title-wrapper">
                         <h3 className="slider__title">
-                            {limit(
-                                'Zhytomyr city Private Enterprise “Bosch”',
-                                40
-                            )}
+                            Kherson city Private Enterprise “HealthyFarm”
                         </h3>
                         <button
                             aria-label="open article"
@@ -156,26 +167,21 @@ export function Slider() {
                         </button>
                     </div>
                     <div className="slider__descr-wrapper">
-                        <p className="slider__info-descr">
-                            {limit('Solar Panels for industrial use', 36)}
-                        </p>
-                        <p className="slider__date">November 2023</p>
+                        <p className="slider__info-descr">Wind power</p>
+                        <p className="slider__date">September 2021</p>
                     </div>
                 </div>
             </SwiperSlide>
             <SwiperSlide className="slider__card">
                 <img
                     className="slider__img"
-                    src={firstCardImgDesktop}
+                    src={fifthCardImg}
                     alt="beautiful view wind turbines, grass covered field, captured holland"
                 />
                 <div className="slider__card-info-box">
                     <div className="slider__title-wrapper">
                         <h3 className="slider__title">
-                            {limit(
-                                'Zhytomyr city Private Enterprise “Bosch”',
-                                40
-                            )}
+                            Zaporizhia city Private Enterprise “Biotech”
                         </h3>
                         <button
                             aria-label="open article"
@@ -187,12 +193,12 @@ export function Slider() {
                     </div>
                     <div className="slider__descr-wrapper">
                         <p className="slider__info-descr">
-                            {limit('Solar Panels for industrial use', 36)}
+                            Mini nuclear stations
                         </p>
-                        <p className="slider__date">November 2023</p>
+                        <p className="slider__date">May 2021</p>
                     </div>
                 </div>
-            </SwiperSlide>
+            </SwiperSlide> */}
         </Swiper>
     );
 }

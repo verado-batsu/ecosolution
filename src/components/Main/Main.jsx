@@ -35,6 +35,7 @@ const {
 
 export function Main() {
     const [headerHeight, setHeaderHeight] = useState(() => findHeaderHeight());
+    const [mainPaddingTop, setMainPaddingTop] = useState(headerHeight + 110);
 
     const isMobile = useMediaQuery({ maxWidth: 767 });
     const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1439 });
@@ -44,8 +45,22 @@ export function Main() {
         setHeaderHeight(findHeaderHeight());
     }, [headerHeight, isMobile, isTablet, isDesktop]);
 
+    useEffect(() => {
+        if (isMobile) {
+            setMainPaddingTop(headerHeight + 110);
+        } else if (isTablet) {
+            setMainPaddingTop(headerHeight + 128);
+        } else {
+            setMainPaddingTop(headerHeight + 176);
+        }
+    }, [headerHeight, isMobile, isTablet, isDesktop]);
+
     return (
-        <section name="Main" className={main}>
+        <section
+            name="Main"
+            className={main}
+            style={{ paddingTop: mainPaddingTop }}
+        >
             <div className={`container ${mainContainer}`}>
                 <div className={mainTopWrapper}>
                     <h1 className={mainTitle}>RENEWABLE ENERGY For any task</h1>

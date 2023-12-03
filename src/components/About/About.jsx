@@ -5,7 +5,7 @@ import {
     ResponsIcon,
     InnovationIcon,
     QualityIcon,
-} from 'assets/images/values/icons';
+} from 'assets/images/about/icons';
 
 import {
     firstImgTablet,
@@ -16,33 +16,33 @@ import {
     firstImgDesktop2x,
     secondImgDesktop,
     secondImgDesktop2x,
-} from 'assets/images/values';
+} from 'assets/images/about';
 
-import styles from './Values.module.scss';
+import styles from './About.module.scss';
 const {
-    values,
-    valuesTitleWrapper,
-    valuesTitle,
-    valuesPreTitle,
-    valuesList,
-    valuesItem,
+    about,
+    aboutTitleWrapper,
+    aboutTitle,
+    aboutPreTitle,
+    aboutList,
+    aboutItem,
     itemTitle,
-    valuesItemIcon,
+    aboutItemIcon,
     itemPreTitle,
-    valuesItemImg1,
-    valuesItemImg2,
-    valuesImg,
+    aboutItemImg1,
+    aboutItemImg2,
+    aboutImg,
 } = styles;
 
-export function Values() {
+export function About() {
     const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1439 });
     const isDesktop = useMediaQuery({ minWidth: 1440 });
     return (
-        <section name="Values" className={values}>
+        <section name="About" className={about}>
             <div className="container">
-                <div className={valuesTitleWrapper}>
-                    <h2 className={valuesTitle}>Main values of our company</h2>
-                    <p className={valuesPreTitle}>
+                <div className={aboutTitleWrapper}>
+                    <h2 className={aboutTitle}>Main about of our company</h2>
+                    <p className={aboutPreTitle}>
                         EcoSolution envisions a world where sustainable energy
                         solutions power a brighter and cleaner future for all.
                         We aspire to be at the forefront of the global shift
@@ -51,11 +51,11 @@ export function Values() {
                         the world's energy needs.
                     </p>
                 </div>
-                <ul className={valuesList}>
-                    <li className={valuesItem}>
+                <ul className={aboutList}>
+                    <li className={aboutItem}>
                         <h3 className={itemTitle}>
                             <div>
-                                <OpenIcon className={valuesItemIcon} />
+                                <OpenIcon className={aboutItemIcon} />
                             </div>
                             <span>Openness</span>
                         </h3>
@@ -63,10 +63,10 @@ export function Values() {
                             to the world, people, new ideas and projects
                         </p>
                     </li>
-                    <li className={valuesItem}>
+                    <li className={aboutItem}>
                         <h3 className={itemTitle}>
                             <div>
-                                <ResponsIcon className={valuesItemIcon} />
+                                <ResponsIcon className={aboutItemIcon} />
                             </div>
                             <span>Responsibility</span>
                         </h3>
@@ -76,10 +76,10 @@ export function Values() {
                             generations
                         </p>
                     </li>
-                    <li className={valuesItem}>
+                    <li className={aboutItem}>
                         <h3 className={itemTitle}>
                             <div>
-                                <InnovationIcon className={valuesItemIcon} />
+                                <InnovationIcon className={aboutItemIcon} />
                             </div>
                             <span>Innovation</span>
                         </h3>
@@ -88,10 +88,10 @@ export function Values() {
                             non-standard solutions
                         </p>
                     </li>
-                    <li className={valuesItem}>
+                    <li className={aboutItem}>
                         <h3 className={itemTitle}>
                             <div>
-                                <QualityIcon className={valuesItemIcon} />
+                                <QualityIcon className={aboutItemIcon} />
                             </div>
                             <span>Quality</span>
                         </h3>
@@ -102,17 +102,17 @@ export function Values() {
                     </li>
                     {isTablet && (
                         <>
-                            <li className={valuesItemImg1}>
+                            <li className={aboutItemImg1}>
                                 <img
-                                    className={valuesImg}
+                                    className={aboutImg}
                                     srcSet={`${firstImgTablet} 1x, ${firstImgTablet2x} 2x`}
                                     src={firstImgTablet}
                                     alt="wind-farms-fields"
                                 />
                             </li>
-                            <li className={valuesItemImg2}>
+                            <li className={aboutItemImg2}>
                                 <img
-                                    className={valuesImg}
+                                    className={aboutImg}
                                     srcSet={`${secondImgTablet} 1x, ${secondImgTablet2x} 2x`}
                                     src={secondImgTablet}
                                     alt="man worker firld by solar panels"
@@ -122,17 +122,17 @@ export function Values() {
                     )}
                     {isDesktop && (
                         <>
-                            <li className={valuesItemImg1}>
+                            <li className={aboutItemImg1}>
                                 <img
-                                    className={valuesImg}
+                                    className={aboutImg}
                                     srcSet={`${firstImgDesktop} 1x, ${firstImgDesktop2x} 2x`}
                                     src={firstImgDesktop}
                                     alt="wind farms fields"
                                 />
                             </li>
-                            <li className={valuesItemImg2}>
+                            <li className={aboutItemImg2}>
                                 <img
-                                    className={valuesImg}
+                                    className={aboutImg}
                                     srcSet={`${secondImgDesktop} 1x, ${secondImgDesktop2x} 2x`}
                                     src={secondImgDesktop}
                                     alt="man worker firld by solar panels"

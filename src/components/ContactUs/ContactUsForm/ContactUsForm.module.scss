@@ -63,8 +63,18 @@
 	}
 }
 
+.contactFormInputError {
+	border-color: #d28b8b;
+}
+
 .contactFormError {
-	color: red;
+	margin-top: 8px;
+	text-align: end;
+	color: #d28b8b;
+
+	@media screen and (min-width: $desktop) {
+		margin-top: 12px;
+	}
 }
 
 .contactFormText {
@@ -103,8 +113,9 @@
 
 	&:hover,
 	&:focus {
-		color: #fff;
-		background-color: #97d28b;
+		color: #97d28b;
+		background-color: #173d33;
+		border-color: #173d33;
 	}
 }
 
@@ -115,6 +126,7 @@
 	&:focus {
 		color: #173d33;
 		background-color: transparent;
+		border-color: #97d28b;
 	}
 
 	cursor: default;
@@ -129,6 +141,6 @@
 	background: #97d28b;
 }
 
-.contactFromArrowIcon {
-	stroke: currentColor;
+.contactFormArrowIcon {
+	stroke: #173d33;
 }
