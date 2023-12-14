@@ -64,7 +64,7 @@ ol {
 	margin: 0;
 }
 
-:focus,
+/* :focus,
 :active {
 	outline: none;
 }
@@ -72,7 +72,7 @@ ol {
 a:focus,
 a:active {
 	outline: none;
-}
+} */
 
 a,
 a:visited,
