@@ -21,7 +21,7 @@ export function FAQItem({ faqItem, onClick, isOpen }) {
                         <PlusIcon className="faq__icon" />
                     )}
                 </div>
-                <p className="faq__q">{q}</p>
+                <span className="faq__q">{q}</span>
             </button>
             <div
                 className={`faq__collapse ${isOpen ? 'open' : ''}`}
