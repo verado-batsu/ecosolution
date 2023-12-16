@@ -96,6 +96,7 @@ export function ContactUs() {
                                     aria-label="open facebook"
                                     className={contactSocialLink}
                                     href="."
+                                    target="_blank"
                                     rel="noopener noreferrer nofollow"
                                 >
                                     <FacebookIcon
@@ -106,6 +107,7 @@ export function ContactUs() {
                                     aria-label="open instargam"
                                     className={contactSocialLink}
                                     href="."
+                                    target="_blank"
                                     rel="noopener noreferrer nofollow"
                                 >
                                     <InstagramIcon

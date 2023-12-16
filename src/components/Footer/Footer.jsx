@@ -69,6 +69,7 @@ export function Footer() {
                                         aria-label="open facebook"
                                         className={footerSocialLink}
                                         href="."
+                                        target="_blank"
                                         rel="noopener noreferrer nofollow"
                                     >
                                         <FacebookIcon
@@ -81,6 +82,7 @@ export function Footer() {
                                         aria-label="open instargam"
                                         className={footerSocialLink}
                                         href="."
+                                        target="_blank"
                                         rel="noopener noreferrer nofollow"
                                     >
                                         <InstagramIcon
@@ -109,6 +111,7 @@ export function Footer() {
                                     aria-label="open facebook"
                                     className={footerSocialLink}
                                     href="."
+                                    target="_blank"
                                     rel="noopener noreferrer nofollow"
                                 >
                                     <FacebookIcon
@@ -121,6 +124,7 @@ export function Footer() {
                                     aria-label="open instargam"
                                     className={footerSocialLink}
                                     href="."
+                                    target="_blank"
                                     rel="noopener noreferrer nofollow"
                                 >
                                     <InstagramIcon
