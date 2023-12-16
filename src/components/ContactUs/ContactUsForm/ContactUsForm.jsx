@@ -69,7 +69,9 @@ export function ContactUsForm() {
                     <Form className={contactForm}>
                         <div className={contactLabelsWrapper}>
                             <label className={contactFormLabel}>
-                                <p className={contactFormTitle}>* Full name:</p>
+                                <span className={contactFormTitle}>
+                                    * Full name:
+                                </span>
                                 <Field
                                     className={
                                         isNameError
@@ -87,7 +89,9 @@ export function ContactUsForm() {
                                 />
                             </label>
                             <label className={contactFormLabel}>
-                                <p className={contactFormTitle}>* E-mail:</p>
+                                <span className={contactFormTitle}>
+                                    * E-mail:
+                                </span>
                                 <Field
                                     className={
                                         isEmailError
@@ -105,7 +109,9 @@ export function ContactUsForm() {
                                 />
                             </label>
                             <label className={contactFormLabel}>
-                                <p className={contactFormTitle}>* Phone:</p>
+                                <span className={contactFormTitle}>
+                                    * Phone:
+                                </span>
                                 <Field
                                     className={
                                         isPhoneError
@@ -123,7 +129,9 @@ export function ContactUsForm() {
                                 />
                             </label>
                             <label className={contactFormLabel}>
-                                <p className={contactFormTitle}>Message:</p>
+                                <span className={contactFormTitle}>
+                                    Message:
+                                </span>
                                 <Field
                                     className={contactFormText}
                                     type="text"
