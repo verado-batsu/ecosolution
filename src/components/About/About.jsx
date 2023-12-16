@@ -54,9 +54,9 @@ export function About() {
                 <ul className={aboutList}>
                     <li className={aboutItem}>
                         <h3 className={itemTitle}>
-                            <div>
+                            <p>
                                 <OpenIcon className={aboutItemIcon} />
-                            </div>
+                            </p>
                             <span>Openness</span>
                         </h3>
                         <p className={itemPreTitle}>
@@ -65,9 +65,9 @@ export function About() {
                     </li>
                     <li className={aboutItem}>
                         <h3 className={itemTitle}>
-                            <div>
+                            <p>
                                 <ResponsIcon className={aboutItemIcon} />
-                            </div>
+                            </p>
                             <span>Responsibility</span>
                         </h3>
                         <p className={itemPreTitle}>
@@ -78,9 +78,9 @@ export function About() {
                     </li>
                     <li className={aboutItem}>
                         <h3 className={itemTitle}>
-                            <div>
+                            <p>
                                 <InnovationIcon className={aboutItemIcon} />
-                            </div>
+                            </p>
                             <span>Innovation</span>
                         </h3>
                         <p className={itemPreTitle}>
@@ -90,9 +90,9 @@ export function About() {
                     </li>
                     <li className={aboutItem}>
                         <h3 className={itemTitle}>
-                            <div>
+                            <p>
                                 <QualityIcon className={aboutItemIcon} />
-                            </div>
+                            </p>
                             <span>Quality</span>
                         </h3>
                         <p className={itemPreTitle}>
