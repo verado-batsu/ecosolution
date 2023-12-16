@@ -54,9 +54,9 @@ export function About() {
                 <ul className={aboutList}>
                     <li className={aboutItem}>
                         <h3 className={itemTitle}>
-                            <p>
+                            <span>
                                 <OpenIcon className={aboutItemIcon} />
-                            </p>
+                            </span>
                             <span>Openness</span>
                         </h3>
                         <p className={itemPreTitle}>
@@ -65,9 +65,9 @@ export function About() {
                     </li>
                     <li className={aboutItem}>
                         <h3 className={itemTitle}>
-                            <p>
+                            <span>
                                 <ResponsIcon className={aboutItemIcon} />
-                            </p>
+                            </span>
                             <span>Responsibility</span>
                         </h3>
                         <p className={itemPreTitle}>
@@ -78,9 +78,9 @@ export function About() {
                     </li>
                     <li className={aboutItem}>
                         <h3 className={itemTitle}>
-                            <p>
+                            <span>
                                 <InnovationIcon className={aboutItemIcon} />
-                            </p>
+                            </span>
                             <span>Innovation</span>
                         </h3>
                         <p className={itemPreTitle}>
@@ -90,9 +90,9 @@ export function About() {
                     </li>
                     <li className={aboutItem}>
                         <h3 className={itemTitle}>
-                            <p>
+                            <span>
                                 <QualityIcon className={aboutItemIcon} />
-                            </p>
+                            </span>
                             <span>Quality</span>
                         </h3>
                         <p className={itemPreTitle}>

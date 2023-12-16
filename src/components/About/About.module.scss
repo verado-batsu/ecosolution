@@ -87,7 +87,7 @@
 		grid-template-rows: 1fr 1fr;
 	}
 
-	@media screen and (min-width: $tablet) {
+	@media screen and (min-width: $desktop) {
 		gap: 48px;
 	}
 }
