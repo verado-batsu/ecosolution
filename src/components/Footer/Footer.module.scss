@@ -60,6 +60,8 @@
 
 	color: #173d33;
 
+	transition: color 250ms ease;
+
 	&:hover,
 	&:focus {
 		color: #97d28b;
@@ -99,6 +101,10 @@
 
 	cursor: pointer;
 
+	transition:
+		color 250ms ease,
+		background-color 250ms ease;
+
 	&:hover,
 	&:focus {
 		color: #97d28b;
@@ -131,6 +137,8 @@
 
 .footerSocialLink {
 	color: #173d33;
+
+	transition: color 250ms ease;
 
 	&:hover,
 	&:focus {
@@ -184,6 +192,8 @@
 	font-family: Fira Sans;
 	font-size: 16px;
 	letter-spacing: -0.64px;
+
+	transition: color 250ms ease;
 
 	&:hover,
 	&:focus {
