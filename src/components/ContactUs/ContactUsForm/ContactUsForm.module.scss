@@ -111,6 +111,11 @@
 	line-height: calc(18px / 16px);
 	letter-spacing: -0.64px;
 
+	transition:
+		color 250ms ease,
+		border-color 250ms ease,
+		background-color 250ms ease;
+
 	&:hover,
 	&:focus {
 		color: #97d28b;
@@ -121,6 +126,11 @@
 
 .contactFormSubmit.disabled {
 	opacity: 0.5;
+
+	transition:
+		color 250ms ease,
+		border-color 250ms ease,
+		background-color 250ms ease;
 
 	&:hover,
 	&:focus {

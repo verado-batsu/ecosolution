@@ -199,6 +199,10 @@
 
 	cursor: pointer;
 
+	transition:
+		color 250ms ease,
+		background-color 250ms ease;
+
 	&:hover,
 	&:focus {
 		color: #97d28b;

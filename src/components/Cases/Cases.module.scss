@@ -100,6 +100,10 @@
 	border: 1px solid #173d33;
 	color: #173d33;
 
+	transition:
+		color 250ms ease,
+		border-color 250ms ease;
+
 	&:hover,
 	&:focus {
 		border-color: #97d28b;

@@ -85,6 +85,10 @@
 	border-radius: 100px;
 	background-color: #97d28b;
 
+	transition:
+		background-color 250ms ease,
+		color 250ms ease;
+
 	&:hover,
 	&:focus {
 		background-color: #173d33;

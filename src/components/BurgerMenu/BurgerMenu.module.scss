@@ -13,6 +13,8 @@
 	color: #292d32;
 	cursor: pointer;
 
+	transition: background-color 250ms ease;
+
 	&:hover,
 	&:focus {
 		background-color: #97d28b;
@@ -93,6 +95,8 @@
 	background-color: transparent;
 	color: #fff;
 
+	transition: color 250ms ease;
+
 	&:hover,
 	&:focus {
 		color: #97d28b;
@@ -141,6 +145,8 @@
 
 	cursor: pointer;
 
+	transition: color 250ms ease;
+
 	&:hover,
 	&:focus {
 		color: #fff;
@@ -165,6 +171,8 @@
 
 .socialLink {
 	color: #fff;
+
+	transition: color 250ms ease;
 
 	&:hover,
 	&:focus {
