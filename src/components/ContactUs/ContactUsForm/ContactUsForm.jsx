@@ -134,7 +134,6 @@ export function ContactUsForm() {
                                 </span>
                                 <Field
                                     className={contactFormText}
-                                    type="text"
                                     name="message"
                                     placeholder="Your message"
                                     as="textarea"
