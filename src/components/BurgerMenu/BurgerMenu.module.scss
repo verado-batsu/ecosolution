@@ -80,6 +80,11 @@
 
 	@media screen and (min-width: $tablet) {
 		width: 365px;
+		max-height: 701px;
+	}
+
+	@media screen and (min-width: $desktop) {
+		max-height: 873px;
 	}
 }
 
