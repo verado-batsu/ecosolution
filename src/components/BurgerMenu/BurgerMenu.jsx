@@ -50,9 +50,34 @@ export function BurgerMenu() {
         setHeaderHeight(findHeaderHeight());
     }, [headerHeight, isMobile, isTablet, isDesktop]);
 
+    useEffect(() => {
+        if (!isDesktop) {
+            return;
+        }
+
+        function handleEscClick(e) {
+            if (e.key === 'Escape') {
+                setIsMenuShown(false);
+            }
+        }
+
+        window.addEventListener('keydown', handleEscClick);
+
+        return () => {
+            window.removeEventListener('keydown', handleEscClick);
+        };
+    }, [isDesktop]);
+
     function handleMenuClick(e) {
         setIsMenuShown(prev => !prev);
         document.body.classList.toggle('_lock');
+    }
+
+    function handleMenuBodyClick(e) {
+        const currClass = e.target.classList[0];
+        if (currClass === menuBody || currClass === menuContainer) {
+            setIsMenuShown(false);
+        }
     }
 
     return (
@@ -71,6 +96,7 @@ export function BurgerMenu() {
                         ? `${menuBody} ${menuBodyActive}`
                         : `${menuBody}`
                 }
+                onClick={handleMenuBodyClick}
             >
                 <div className={`${menuContainer} container`}>
                     <div
