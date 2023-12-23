@@ -12,9 +12,7 @@ const {
 } = styled;
 
 export function Electricity() {
-    const [counterNumber, setCounterNumber] = useState(
-        Math.floor(new Date().getTime() / 1000)
-    );
+    const [counterNumber, setCounterNumber] = useState(1134147814);
 
     useEffect(() => {
         let timerId = null;
