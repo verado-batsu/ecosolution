@@ -1,5 +1,6 @@
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import * as yup from 'yup';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 import { ArrowRightIcon } from 'assets/images/contact-us/icons';
 
@@ -34,6 +35,7 @@ export function ContactUsForm() {
     };
 
     function handleSubmit(person, { resetForm }) {
+        Notify.success(`Form submitted`);
         resetForm();
     }
 
